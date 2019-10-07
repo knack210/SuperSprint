@@ -4,12 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class CharHealth : MonoBehaviour
-{
-    [SerializeField]
+{    
     private CharacterController characterController;
     [SerializeField]
     private float health = 100f;
     private float maxHealth;
+    [SerializeField]
+    private float invincibleTime;
+    private bool isInvincible;
     //[SerializeField]
     //private Image healthBar;
 
@@ -17,14 +19,19 @@ public class CharHealth : MonoBehaviour
     {
         //SetHealthBar(); for ui
         maxHealth = health;
-        characterController = FindObjectOfType<CharacterController>();
+        characterController = GetComponent<CharacterController>();
     }
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
-        //SetHealthBar();
-        IsDead();
+        if (!isInvincible)
+        {
+            health -= damage;
+            //SetHealthBar();
+            IsDead();
+            isInvincible = true;
+            Invoke(nameof(SetInvincibility), invincibleTime);
+        }
     }
 
     private void IsDead()
@@ -39,5 +46,10 @@ public class CharHealth : MonoBehaviour
     private void SetHealthBar()
     {
 
+    }
+
+    private void SetInvincibility()
+    {
+        isInvincible = false;
     }
 }

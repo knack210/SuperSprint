@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GrndEnemy : MonoBehaviour
+public class EnemyBehavior: MonoBehaviour
 {
     private Rigidbody2D rb;
+    [SerializeField]
     private float movementSpeed = -5f;
     [SerializeField]
     private int damage;
+    private bool active;
     CapsuleCollider2D myCollider;
 
     private void Start()
@@ -19,7 +21,10 @@ public class GrndEnemy : MonoBehaviour
 
     private void Update()
     {
-        rb.velocity = new Vector2(movementSpeed, rb.velocity.y);
+        if (active)
+        {
+            rb.velocity = new Vector2(movementSpeed, rb.velocity.y);
+        }
     }
 
     private void SetSpeed(float speed)
@@ -35,9 +40,20 @@ public class GrndEnemy : MonoBehaviour
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.tag == "Player")
-        {
-            Destroy(this.gameObject);
+        {            
             other.SendMessage("TakeDamage", damage);
+            Destroy(gameObject);
         }
     }
+
+    private void OnBecameVisible()
+    {
+        active = true;
+    }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
+
 }
