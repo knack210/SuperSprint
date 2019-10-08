@@ -4,21 +4,31 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
-    public bool isRunning;
-    public float speed;
-    public float jump;
-    public GameObject goal;
-    public LayerMask groundLayer;
+    private bool isRunning;
+    [SerializeField]
+    private float speed;
+    [SerializeField]
+    private float jumpHeight;
+    [SerializeField]
+    private GameObject goal;
+    [SerializeField]
+    private LayerMask groundLayer;
 
     private Rigidbody2D rb;
     private Vector2 goalLocation;
     private Transform GroundTouch;
+    [SerializeField]
+    private BoxCollider2D standCol;
+    [SerializeField]
+    private BoxCollider2D slideCol;
 
     private void Start()
     {
+        isRunning = true;
         rb = GetComponent<Rigidbody2D>();
         goalLocation = goal.transform.position;
-        GroundTouch = this.transform.Find("GroundTouch");  
+        GroundTouch = this.transform.Find("GroundTouch");
+        slideCol.enabled = false;
     }
 
     private void Update()
@@ -31,7 +41,12 @@ public class CharacterController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsOnGround())
         {
             Debug.Log("Grounded");
-            rb.AddForce(Vector2.up * jump, ForceMode2D.Impulse);
+            rb.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
+        }
+
+        if (Input.GetKeyDown(KeyCode.DownArrow) && IsOnGround())
+        {
+            slideStart();
         }
     }
 
@@ -39,5 +54,20 @@ public class CharacterController : MonoBehaviour
     {
         
         return Physics2D.OverlapCircle(GroundTouch.position, 0.1f,  groundLayer);
+    }
+
+    private void slideStart()
+    {
+        Debug.Log("Sliding");
+        standCol.enabled = false;
+        slideCol.enabled = true;
+        Invoke("slideEnd", 2);
+    }
+
+    private void slideEnd()
+    {
+        Debug.Log("Not sliding");
+        standCol.enabled = true;
+        slideCol.enabled = false;
     }
 }
