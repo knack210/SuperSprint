@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CharHealth : MonoBehaviour
 {    
@@ -12,6 +13,8 @@ public class CharHealth : MonoBehaviour
     [SerializeField]
     private float invincibleTime;
     private bool isInvincible;
+	[SerializeField]
+	private Text healthText;
     //[SerializeField]
     //private Image healthBar;
 
@@ -20,6 +23,7 @@ public class CharHealth : MonoBehaviour
         //SetHealthBar(); for ui
         maxHealth = health;
         characterController = GetComponent<CharacterController>();
+		UpdateUI();
     }
 
     public void TakeDamage(int damage)
@@ -30,6 +34,7 @@ public class CharHealth : MonoBehaviour
             //SetHealthBar();
             IsDead();
             isInvincible = true;
+			UpdateUI();
             Invoke(nameof(SetInvincibility), invincibleTime);
         }
     }
@@ -52,4 +57,10 @@ public class CharHealth : MonoBehaviour
     {
         isInvincible = false;
     }
+
+	private void UpdateUI()
+	{
+		string remainingHealth = (health / 20f).ToString();
+		healthText.text = remainingHealth;
+	}
 }
