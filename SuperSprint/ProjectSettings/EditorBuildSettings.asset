@@ -12,6 +12,18 @@ EditorBuildSettings:
     path: Assets/Scenes/StartUpScreen.unity
     guid: a38c17f9954820540bd2c6ebb0d6b01e
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: ae4019bed72b2db45b2de4a2cd15d4f8
+  - enabled: 1
+    path: Assets/Scenes/Mission Menu.unity
+    guid: 02ca3f0728857e74b9c174daa5f6561b
+  - enabled: 1
     path: Assets/Scenes/TutorialLevel.unity
     guid: 611d760721eb8a74a8cf3089f0bd8fa2
+  - enabled: 1
+    path: Assets/Scenes/HighScoreMenu.unity
+    guid: f5e84d7549965c643bcd59597638f650
+  - enabled: 1
+    path: Assets/Scenes/SettingsMenu.unity
+    guid: 11b50933b54d25b41b847ec6135d2a14
   m_configObjects: {}

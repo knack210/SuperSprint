@@ -19,8 +19,37 @@ public class SceneLoader : MonoBehaviour
 
 
 
-    public void LoadTutorial ()
-        {
+    public void LoadTutorial()
+    {
         SceneManager.LoadScene("TutorialLevel");
-        }
+    }
+
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void LoadMissionMenu()
+    {
+        SceneManager.LoadScene("Mission Menu");
+    }
+
+
+    public void QuitButton()
+    {
+        Application.Quit();
+    }
+
+  
+
+    public void HighScores()
+    {
+        SceneManager.LoadScene("HighScoreMenu");
+    }
+
+    public void Settings()
+    {
+        SceneManager.LoadScene("SettingsMenu");
+    }
+
 }
