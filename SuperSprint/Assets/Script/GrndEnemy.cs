@@ -8,13 +8,12 @@ public class GrndEnemy : MonoBehaviour
     private float movementSpeed = -5f;
     [SerializeField]
     private int damage;
-    CapsuleCollider2D myCollider;
+    BoxCollider2D myCollider;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        myCollider = GetComponent<CapsuleCollider2D>();
-        myCollider.isTrigger = true;
+        myCollider = GetComponent<BoxCollider2D>();
     }
 
     private void Update()
@@ -32,11 +31,11 @@ public class GrndEnemy : MonoBehaviour
         damage = setDamage;
     }
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
         {
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
             other.SendMessage("TakeDamage", damage);
         }
     }

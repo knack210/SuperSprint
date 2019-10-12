@@ -10,13 +10,12 @@ public class EnemyBehavior: MonoBehaviour
     [SerializeField]
     private int damage;
     private bool active;
-    CapsuleCollider2D myCollider;
+    BoxCollider2D myCollider;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        myCollider = GetComponent<CapsuleCollider2D>();
-        myCollider.isTrigger = true;
+        myCollider = GetComponent<BoxCollider2D>();
     }
 
     private void Update()
@@ -37,12 +36,12 @@ public class EnemyBehavior: MonoBehaviour
         damage = setDamage;
     }
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
         {            
             other.SendMessage("TakeDamage", damage);
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 
