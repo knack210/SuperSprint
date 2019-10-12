@@ -6,7 +6,10 @@ public class ObstacleStationary : MonoBehaviour
 {
     [SerializeField]
     private int damage;
+    [SerializeField]
+    private int scoreAward;
     private Rigidbody2D rb;
+    private bool playerHit;
     private float thrust = 10.0f;
     BoxCollider2D myCollider;
 
@@ -17,18 +20,23 @@ public class ObstacleStationary : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
         {
+            playerHit = true;
             other.SendMessage("TakeDamage", damage);            
             //Destroy(gameObject);
             rb.bodyType = RigidbodyType2D.Dynamic;
         }
+    }
+
+    private void OnBecameInvisible()
+    {
+        if (!playerHit)
+        {
+            Camera.main.SendMessage("AddScore", scoreAward);
+        }
+        Destroy(gameObject);
     }
 }

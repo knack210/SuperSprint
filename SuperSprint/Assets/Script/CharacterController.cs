@@ -30,17 +30,15 @@ public class CharacterController : MonoBehaviour
     private void Start()
     {
         isRunning = true;
-        anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();        
         rb = GetComponent<Rigidbody2D>();
         goalLocation = goal.transform.position;
         GroundTouch = this.transform.Find("GroundTouch");
         slideCol.enabled = false;
     }
 
-    private void LateUpdate()
-    {
-        
-
+    private void Update()
+    {    
         if (isRunning)
         {
             this.transform.position = Vector2.MoveTowards(transform.position, goalLocation, speed * Time.deltaTime);           
@@ -51,16 +49,17 @@ public class CharacterController : MonoBehaviour
             anim.SetBool("isJump", false);
         }
         
-        if (Input.GetButtonDown("Jump") && IsOnGround() && !isSliding)
+        if (Input.GetButtonDown("Jump") && IsOnGround())
         {
+            if (isSliding) { SlideEnd();  }            
             Debug.Log("Grounded");
             anim.SetBool("isJump", true);
             rb.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
         }
 
-        if (Input.GetKeyDown(KeyCode.DownArrow) && IsOnGround() && !isSliding)
+        if (Input.GetButtonDown("Slide") && IsOnGround() && !isSliding)
         {
-            slideStart();
+            SlideStart();
         }
     }
 
@@ -70,22 +69,23 @@ public class CharacterController : MonoBehaviour
         return Physics2D.OverlapCircle(GroundTouch.position, 0.1f,  groundLayer);
     }
 
-    private void slideStart()
+    private void SlideStart()
     {
         Debug.Log("Sliding");
         anim.SetBool("isSlide", true);
         isSliding = true;
         standCol.enabled = false;
         slideCol.enabled = true;
-        Invoke("slideEnd", slideTime);
+        Invoke("SlideEnd", slideTime);
     }
 
-    private void slideEnd()
+    public void SlideEnd()
     {
         Debug.Log("Not sliding");
+        CancelInvoke("SlideEnd");
+        anim.SetBool("isSlide", false);
         standCol.enabled = true;
         slideCol.enabled = false;
-        isSliding = false;
-        anim.SetBool("isSlide", false);
-    }
+        isSliding = false;        
+    }    
 }

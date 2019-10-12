@@ -6,16 +6,20 @@ public class EnemyBehavior: MonoBehaviour
 {
     private Rigidbody2D rb;
     [SerializeField]
-    private float movementSpeed = -5f;
+    private float movementSpeed;
     [SerializeField]
     private int damage;
+    [SerializeField]
+    private int scoreAward;
     private bool active;
+    private bool hitPlayer;
     BoxCollider2D myCollider;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         myCollider = GetComponent<BoxCollider2D>();
+        movementSpeed = movementSpeed * -1;
     }
 
     private void Update()
@@ -25,23 +29,13 @@ public class EnemyBehavior: MonoBehaviour
             rb.velocity = new Vector2(movementSpeed, rb.velocity.y);
         }
     }
-
-    private void SetSpeed(float speed)
-    {
-        movementSpeed = (speed * -1f);
-    }
-
-    private void SetDamage(int setDamage)
-    {
-        damage = setDamage;
-    }
-
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
-        {            
-            other.SendMessage("TakeDamage", damage);
-            //Destroy(gameObject);
+        {
+            hitPlayer = true;
+            other.SendMessage("TakeDamage", damage);            
         }
     }
 
@@ -52,6 +46,10 @@ public class EnemyBehavior: MonoBehaviour
 
     private void OnBecameInvisible()
     {
+        if (!hitPlayer)
+        {
+            Camera.main.SendMessage("AddScore", scoreAward);
+        }
         Destroy(gameObject);
     }
 
