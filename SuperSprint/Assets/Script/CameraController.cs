@@ -7,7 +7,7 @@ public class CameraController : MonoBehaviour
 	[SerializeField]
 	private GameObject follow;
     [SerializeField]
-    private GameObject end;
+    private GameObject end;   
 
     private float offset;
     private float endPoint;
