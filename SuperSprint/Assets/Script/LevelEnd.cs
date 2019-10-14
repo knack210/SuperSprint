@@ -12,6 +12,11 @@ public class LevelEnd : MonoBehaviour
         victoryMessage.text = "";
     }
 
+    private void OnBecameVisible()
+    {
+        Camera.main.SendMessage("DisableText");
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {        
         if (other.CompareTag("Player"))           
