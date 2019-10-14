@@ -15,6 +15,8 @@ public class CharHealth : MonoBehaviour
     private float maxPower = 100f;
     [SerializeField]
     private float powerCost;
+	[SerializeField]
+	private int powerScore = 20;
     [SerializeField]
     private float regenRate;
     private bool regenActive;
@@ -98,7 +100,9 @@ public class CharHealth : MonoBehaviour
         if (power >= powerCost)
         {
             power -= powerCost;
+			Camera.main.SendMessage("AddScore", powerScore);
             SendMessage("ActivatePower");
+			UpdateMeter();
         }
     }
 
@@ -120,6 +124,6 @@ public class CharHealth : MonoBehaviour
 
     private void UpdateMeter()
     {
-        powerText.text = power.ToString() + "%";
+        powerText.text = Mathf.RoundToInt(power).ToString() + "%";
     }
 }

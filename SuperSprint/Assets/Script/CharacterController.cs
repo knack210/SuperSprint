@@ -88,4 +88,9 @@ public class CharacterController : MonoBehaviour
         slideCol.enabled = false;
         isSliding = false;        
     }    
+
+	public void StopRunning()
+	{
+		isRunning = false;
+	}
 }

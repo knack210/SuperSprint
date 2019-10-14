@@ -18,9 +18,11 @@ public class LevelEnd : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other)
-    {        
+    {
+		Debug.Log("I've been entered");
         if (other.CompareTag("Player"))           
-        {          
+        {
+			other.SendMessage("StopRunning");
             victoryMessage.text = "Congratulations!";
         }
     }
