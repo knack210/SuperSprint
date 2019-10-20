@@ -10,6 +10,9 @@ public class ScoreFunctionality : MonoBehaviour
 
     [SerializeField]
     private Text scoreText;
+
+
+  
     private int currentScore;
 
 

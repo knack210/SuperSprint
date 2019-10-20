@@ -6,14 +6,19 @@ using UnityEngine.UI;
 
 public class CharHealth : MonoBehaviour
 {    
-    private CharacterController characterController;    
-    private float health;
+    private CharacterController characterController;   
+    
+    //trashmax comment: changed health to 100f so its not null at start
+    private float health=100f;
     [SerializeField]
     private float maxHealth = 100f;
 
     //TrashMaxCode
    [SerializeField]
-   Image healthBar;
+   private Image healthBar;
+
+    [SerializeField]
+    private Image powerBar;
     //TrashMaxCode
  
 
@@ -52,8 +57,13 @@ public class CharHealth : MonoBehaviour
         //SetHealthBar(); for ui
 
         //TrashMaxCode
-        healthBar = GetComponent<Image>();
-        //Trashmax
+      
+        SetHealthBar();
+
+
+        SetPowerBar();
+        //Trashmaxcode
+
 
         health = maxHealth;
         power = 0;
@@ -76,16 +86,16 @@ public class CharHealth : MonoBehaviour
 
     private void LateUpdate()
     {
-        //trashmax
-        healthBar.fillAmount = health / maxHealth;
-        //trashmax
-
-
-
+   
         if ((power < maxPower) && regenActive)
         {
             power = Mathf.MoveTowards(power, maxPower, regenRate * Time.deltaTime);
             UpdateMeter();
+
+            //trashmaxcode
+            SetPowerBar();
+            //trashmaxcode
+
         }
 
         if (power >= powerCost)
@@ -100,7 +110,9 @@ public class CharHealth : MonoBehaviour
         {
             health -= damage;
             //SetHealthBar();
-                               
+                                //trashmaxcode
+                                SetHealthBar();
+                                //trashmaxcode
 
     SendMessage("SlideEnd");
             IsDead();
@@ -121,10 +133,21 @@ public class CharHealth : MonoBehaviour
     //updating ui healthbar
     private void SetHealthBar()
     {
+        //trashmaxcode
+        healthBar.fillAmount = health / maxHealth;
+        //trashmaxcode
+    }
 
-                            
 
-}
+    //trashmaxcode
+
+        private void SetPowerBar()
+    {
+        powerBar.fillAmount = power / maxPower;
+    }
+    //trashmaxcode
+
+
 
 public void EnableInvincibility()
     {
@@ -170,4 +193,7 @@ public void EnableInvincibility()
     {
         powerText.text = Mathf.RoundToInt(power).ToString() + "%";
     }
+
+
+
 }
