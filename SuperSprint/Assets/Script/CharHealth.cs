@@ -9,7 +9,15 @@ public class CharHealth : MonoBehaviour
     private CharacterController characterController;    
     private float health;
     [SerializeField]
-    private float maxHealth = 100f;     
+    private float maxHealth = 100f;
+
+    //TrashMaxCode
+   [SerializeField]
+   Image healthBar;
+    //TrashMaxCode
+ 
+
+
     private float power;
     [SerializeField]
     private float maxPower = 100f;
@@ -32,19 +40,48 @@ public class CharHealth : MonoBehaviour
     //[SerializieField]
     //private Image powerBar;
 
+                     
+
+   
+
+
     private void Start()
     {
+
+
         //SetHealthBar(); for ui
+
+        //TrashMaxCode
+        healthBar = GetComponent<Image>();
+        //Trashmax
+
         health = maxHealth;
         power = 0;
         regenActive = true;
         characterController = GetComponent<CharacterController>();
 		UpdateUI();
         UpdateMeter();
+
+    
     }
+
+
+
+
+
+
+
+
+
 
     private void LateUpdate()
     {
+        //trashmax
+        healthBar.fillAmount = health / maxHealth;
+        //trashmax
+
+
+
         if ((power < maxPower) && regenActive)
         {
             power = Mathf.MoveTowards(power, maxPower, regenRate * Time.deltaTime);
@@ -63,7 +100,9 @@ public class CharHealth : MonoBehaviour
         {
             health -= damage;
             //SetHealthBar();
-            SendMessage("SlideEnd");
+                               
+
+    SendMessage("SlideEnd");
             IsDead();
             EnableInvincibility();
 			UpdateUI();
@@ -83,9 +122,11 @@ public class CharHealth : MonoBehaviour
     private void SetHealthBar()
     {
 
-    }
+                            
 
-    public void EnableInvincibility()
+}
+
+public void EnableInvincibility()
     {
         isInvincible = true;
     }
@@ -120,7 +161,10 @@ public class CharHealth : MonoBehaviour
 	{
 		string remainingHealth = (health / 20f).ToString();
 		healthText.text = remainingHealth;
-	}
+
+
+
+    }
 
     private void UpdateMeter()
     {
