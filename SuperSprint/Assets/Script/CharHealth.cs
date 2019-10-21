@@ -5,11 +5,9 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CharHealth : MonoBehaviour
-{    
-    private CharacterController characterController;   
-    
+{  
     //trashmax comment: changed health to 100f so its not null at start
-    private float health=100f;
+    private float health = 100f;
     [SerializeField]
     private float maxHealth = 100f;
 
@@ -36,10 +34,6 @@ public class CharHealth : MonoBehaviour
     [SerializeField]
     private float invincibleTime;
     private bool isInvincible;
-	[SerializeField]
-	private Text healthText;
-    [SerializeField]
-    private Text powerText;
     //[SerializeField]
     //private Image healthBar;
     //[SerializieField]
@@ -59,30 +53,14 @@ public class CharHealth : MonoBehaviour
         //TrashMaxCode
       
         SetHealthBar();
-
-
         SetPowerBar();
         //Trashmaxcode
 
 
-        health = maxHealth;
+       
         power = 0;
-        regenActive = true;
-        characterController = GetComponent<CharacterController>();
-		UpdateUI();
-        UpdateMeter();
-
-    
+        regenActive = true;    
     }
-
-
-
-
-
-
-
-
-
 
     private void LateUpdate()
     {
@@ -90,7 +68,7 @@ public class CharHealth : MonoBehaviour
         if ((power < maxPower) && regenActive)
         {
             power = Mathf.MoveTowards(power, maxPower, regenRate * Time.deltaTime);
-            UpdateMeter();
+
 
             //trashmaxcode
             SetPowerBar();
@@ -104,20 +82,19 @@ public class CharHealth : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         if (!isInvincible)
         {
             health -= damage;
-            //SetHealthBar();
-                                //trashmaxcode
-                                SetHealthBar();
-                                //trashmaxcode
+			SendMessage("IsHurt");            
+            SetHealthBar();
+           
 
-    SendMessage("SlideEnd");
+			SendMessage("SlideEnd");
             IsDead();
             EnableInvincibility();
-			UpdateUI();
+
             Invoke(nameof(DisableInvincibility), invincibleTime);
         }
     }
@@ -141,7 +118,7 @@ public class CharHealth : MonoBehaviour
 
     //trashmaxcode
 
-        private void SetPowerBar()
+    private void SetPowerBar()
     {
         powerBar.fillAmount = power / maxPower;
     }
@@ -149,7 +126,7 @@ public class CharHealth : MonoBehaviour
 
 
 
-public void EnableInvincibility()
+	public void EnableInvincibility()
     {
         isInvincible = true;
     }
@@ -166,7 +143,6 @@ public void EnableInvincibility()
             power -= powerCost;
 			Camera.main.SendMessage("AddScore", powerScore);
             SendMessage("ActivatePower");
-			UpdateMeter();
         }
     }
 
@@ -179,21 +155,4 @@ public void EnableInvincibility()
     {
         regenActive = false;
     }
-
-	private void UpdateUI()
-	{
-		string remainingHealth = (health / 20f).ToString();
-		healthText.text = remainingHealth;
-
-
-
-    }
-
-    private void UpdateMeter()
-    {
-        powerText.text = Mathf.RoundToInt(power).ToString() + "%";
-    }
-
-
-
 }

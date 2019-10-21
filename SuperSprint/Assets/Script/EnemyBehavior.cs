@@ -8,7 +8,7 @@ public class EnemyBehavior: MonoBehaviour
     [SerializeField]
     private float movementSpeed;
     [SerializeField]
-    private int damage;
+    private float damage;
     [SerializeField]
     private int scoreAward;
     private bool active;

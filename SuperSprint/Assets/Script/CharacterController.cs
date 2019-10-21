@@ -24,6 +24,8 @@ public class CharacterController : MonoBehaviour
     private Animator anim;
     [SerializeField]
     private BoxCollider2D standCol;
+	[SerializeField]
+	private BoxCollider2D jumpCol;
     [SerializeField]
     private BoxCollider2D slideCol;
 
@@ -34,6 +36,7 @@ public class CharacterController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         goalLocation = goal.transform.position;
         GroundTouch = this.transform.Find("GroundTouch");
+		jumpCol.enabled = false;
         slideCol.enabled = false;
     }
 
@@ -44,16 +47,29 @@ public class CharacterController : MonoBehaviour
             this.transform.position = Vector2.MoveTowards(transform.position, goalLocation, speed * Time.deltaTime);           
         }
 
-        if (IsOnGround())
+        if (IsOnGround() && anim.GetBool("isJump"))
         {
             anim.SetBool("isJump", false);
+			jumpCol.enabled = false;
+			standCol.enabled = true;
         }
         
         if (Input.GetButtonDown("Jump") && IsOnGround())
         {
-            if (isSliding) { SlideEnd();  }            
+            if (isSliding)
+			{
+				SlideEnd();
+				slideCol.enabled = false;
+			}
+
+			else
+			{
+				standCol.enabled = false;
+			}
+			
             Debug.Log("Grounded");
             anim.SetBool("isJump", true);
+			jumpCol.enabled = true;
             rb.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
         }
 
@@ -92,5 +108,10 @@ public class CharacterController : MonoBehaviour
 	public void StopRunning()
 	{
 		isRunning = false;
+	}
+
+	public void IsHurt()
+	{
+		anim.SetTrigger("isHurt");
 	}
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObstacleStationary : MonoBehaviour
 {
     [SerializeField]
-    private int damage;
+    private float damage;
     [SerializeField]
     private int scoreAward;
     private Rigidbody2D rb;

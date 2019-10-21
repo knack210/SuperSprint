@@ -40,6 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4828898216120122144}
   - component: {fileID: 8773125123803025586}
+  - component: {fileID: 6588887016342697925}
   - component: {fileID: 7114317455190642381}
   - component: {fileID: 2312036977920871300}
   - component: {fileID: 6510814110467985607}
@@ -62,7 +63,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5402302801128731199}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.54, y: -1.39, z: 0}
+  m_LocalPosition: {x: -7.86, y: -1.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 516584890551223531}
@@ -94,6 +95,32 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 2.6, y: 3.5}
+  m_EdgeRadius: 0
+--- !u!61 &6588887016342697925
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5402302801128731199}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.28}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.6499999, y: 3.52}
+    newSize: {x: 2.23, y: 3.6999998}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.67, y: 4.08}
   m_EdgeRadius: 0
 --- !u!61 &7114317455190642381
 BoxCollider2D:
@@ -162,6 +189,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   standCol: {fileID: 8773125123803025586}
+  jumpCol: {fileID: 6588887016342697925}
   slideCol: {fileID: 7114317455190642381}
 --- !u!95 &1287744462258803671
 Animator:
@@ -243,8 +271,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  healthBar: {fileID: 0}
+  powerBar: {fileID: 0}
   maxPower: 100
   powerCost: 100
+  powerScore: 20
   regenRate: 10
   invincibleTime: 2
   healthText: {fileID: 0}
