@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Enemy
+  - Obstacle
   layers:
   - Default
   - TransparentFX
@@ -15,9 +17,9 @@ TagManager:
   - 
   - 
   - Ground
-  - 
-  - 
-  - 
+  - Player
+  - Enemy
+  - Obstacle
   - 
   - 
   - 
@@ -42,9 +44,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Object
-    uniqueID: 3361593609
+  - name: Background
+    uniqueID: 1795564585
     locked: 0
   - name: Player
     uniqueID: 792358587
+    locked: 0
+  - name: Object
+    uniqueID: 3361593609
+    locked: 0
+  - name: Enemy
+    uniqueID: 3259973701
     locked: 0

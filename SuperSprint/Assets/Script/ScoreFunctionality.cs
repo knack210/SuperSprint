@@ -2,35 +2,51 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+
 
 public class ScoreFunctionality : MonoBehaviour
 {
     // Attatch this script to the main camera for the level
-
-
+	
     [SerializeField]
     private Text scoreText;
-
-
-  
+	[SerializeField]
+	private TextMeshProUGUI scorePopup;
+	[SerializeField]
+	private float popupLength;
+	     
     private int currentScore;
 
 
     private void Start()
     {
         currentScore = 0;
-        UpdateText();
+		UpdateScoreCount();
+		scorePopup.text = "";        
     }
 
     public void AddScore(int points)
     {
+		TextMeshProUGUI popup = Instantiate(scorePopup, scorePopup.transform);
+		popup.text = "+" + points.ToString();
+
+		Destroy(popup, popupLength);
         currentScore += points;
-        UpdateText();
+        UpdateScoreCount();
     }
        
     
-    private void UpdateText()
+    private void UpdateScoreCount()
     {
-        scoreText.text = "Current score: " + currentScore.ToString();
+		if (scoreText != null)
+		{
+			scoreText.text = "Current score: " + currentScore.ToString();
+		}
     }
+
+	private void PopUpScore()
+	{
+
+	}
 }

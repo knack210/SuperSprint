@@ -37,6 +37,10 @@ public class ObstacleStationary : MonoBehaviour
         {
             Camera.main.SendMessage("AddScore", scoreAward);
         }
-        Destroy(gameObject);
+
+		if (gameObject != null)
+		{
+			Destroy(gameObject);
+		}
     }
 }

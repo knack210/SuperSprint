@@ -277,9 +277,7 @@ MonoBehaviour:
   powerCost: 100
   powerScore: 20
   regenRate: 10
-  invincibleTime: 2
-  healthText: {fileID: 0}
-  powerText: {fileID: 0}
+  invincibleTime: 1
 --- !u!114 &6923150100646639061
 MonoBehaviour:
   m_ObjectHideFlags: 0

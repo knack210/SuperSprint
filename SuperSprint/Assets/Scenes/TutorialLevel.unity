@@ -216,6 +216,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 2104607385}
+  scorePopup: {fileID: 1428435848}
+  popupLength: 0.3
 --- !u!114 &205167284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1224,6 +1226,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1428435848 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1381597154751312334, guid: 006b3291b9fa49549864ff78f3a7f39a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1381597155342299896}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1495735012 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1381597154152884252, guid: 006b3291b9fa49549864ff78f3a7f39a,
@@ -2061,6 +2075,11 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1381597155559593362, guid: 006b3291b9fa49549864ff78f3a7f39a,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006b3291b9fa49549864ff78f3a7f39a, type: 3}
 --- !u!1 &5402302801128731199 stripped
@@ -2288,7 +2307,7 @@ PrefabInstance:
     - target: {fileID: 6510814110467985607, guid: ac71f571f9500ad49b7214c0375129d0,
         type: 3}
       propertyPath: jumpHeight
-      value: 8
+      value: 6.75
       objectReference: {fileID: 0}
     - target: {fileID: 264334137054073751, guid: ac71f571f9500ad49b7214c0375129d0,
         type: 3}

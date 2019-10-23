@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 4125886990359771442}
   - component: {fileID: 7577510761083371092}
   - component: {fileID: 7330636768087152609}
-  m_Layer: 0
-  m_Name: Obstacle
-  m_TagString: Untagged
+  m_Layer: 11
+  m_Name: Trash_Can
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,8 +68,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -933373687
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3df3a262d747c56408459b69b72252bb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
