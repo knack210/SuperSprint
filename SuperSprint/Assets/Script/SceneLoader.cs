@@ -8,16 +8,11 @@ public class SceneLoader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        if (SceneManager.GetActiveScene().name == "Menu")
+        {
+            Camera.main.SendMessage("CheckForData");
+        }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-
 
     public void LoadTutorial()
     {
@@ -50,6 +45,6 @@ public class SceneLoader : MonoBehaviour
     public void Settings()
     {
         SceneManager.LoadScene("SettingsMenu");
-    }
+    }   
 
 }

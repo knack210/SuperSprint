@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 770894452}
   - component: {fileID: 770894451}
   m_Layer: 0
-  m_Name: High scores Text
+  m_Name: MusicText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -471,6 +471,7 @@ GameObject:
   - component: {fileID: 947063407}
   - component: {fileID: 947063406}
   - component: {fileID: 947063405}
+  - component: {fileID: 947063408}
   m_Layer: 0
   m_Name: 'music  Button '
   m_TagString: Untagged
@@ -538,15 +539,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1775845125}
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 947063403}
+        m_MethodName: SendMessage
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Clicked
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -588,6 +589,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 947063403}
   m_CullTransparentMesh: 0
+--- !u!114 &947063408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947063403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b094372db10263b44aba8b691c72a9d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicText: {fileID: 770894451}
 --- !u!1 &1164587800
 GameObject:
   m_ObjectHideFlags: 0
@@ -600,6 +614,7 @@ GameObject:
   - component: {fileID: 1164587804}
   - component: {fileID: 1164587803}
   - component: {fileID: 1164587802}
+  - component: {fileID: 1164587805}
   m_Layer: 0
   m_Name: 'Sounds Button '
   m_TagString: Untagged
@@ -666,7 +681,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1164587803}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1164587805}
+        m_MethodName: SendMessage
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Clicked
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1164587803
@@ -706,6 +732,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1164587800}
   m_CullTransparentMesh: 0
+--- !u!114 &1164587805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164587800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a8e1f13e7e5543418b2727aba5ff00f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundText: {fileID: 2125378033}
 --- !u!1 &1227197635
 GameObject:
   m_ObjectHideFlags: 0
@@ -1474,7 +1513,7 @@ GameObject:
   - component: {fileID: 2125378034}
   - component: {fileID: 2125378033}
   m_Layer: 0
-  m_Name: MissionsText
+  m_Name: SoundText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
