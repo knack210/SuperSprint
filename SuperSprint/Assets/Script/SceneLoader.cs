@@ -14,9 +14,25 @@ public class SceneLoader : MonoBehaviour
         }
     }
 
-    public void LoadTutorial()
+    public void LoadLevel1()
     {
-        SceneManager.LoadScene("TutorialLevel");
+        SceneManager.LoadScene("Level1");
+    }
+
+    public void LoadLevel2()
+    {
+        if (PlayerPrefs.GetInt("isLevel2") == 1)
+        {
+            SceneManager.LoadScene("Level2");
+        }
+    }
+
+    public void LoadLevel3()
+    {
+        if (PlayerPrefs.GetInt("isLevel3") == 1)
+        {
+            Debug.Log("Add a level 3!");
+        }
     }
 
     public void LoadMainMenu()
@@ -45,6 +61,25 @@ public class SceneLoader : MonoBehaviour
     public void Settings()
     {
         SceneManager.LoadScene("SettingsMenu");
-    }   
+    }
 
+    // Debug, remove for final build
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            Debug.Log("Unlocked!");
+            PlayerPrefs.SetInt("isLevel2", 1);
+            PlayerPrefs.SetInt("isLevel3", 1);
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            Debug.Log("Locked!");
+            PlayerPrefs.SetInt("isLevel2", 0);
+            PlayerPrefs.SetInt("isLevel3", 0);
+
+        }
+    }
 }
