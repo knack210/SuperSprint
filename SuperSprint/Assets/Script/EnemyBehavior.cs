@@ -13,12 +13,12 @@ public class EnemyBehavior: MonoBehaviour
     private int scoreAward;
     private bool active;
     private bool hitPlayer;
-    BoxCollider2D myCollider;
+    PolygonCollider2D myCollider;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        myCollider = GetComponent<BoxCollider2D>();
+        myCollider = GetComponent<PolygonCollider2D>();
         movementSpeed = movementSpeed * -1;
     }
 

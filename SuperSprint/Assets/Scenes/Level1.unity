@@ -669,7 +669,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &717883106
 MonoBehaviour:
@@ -1172,7 +1172,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1176688865 stripped
 GameObject:
@@ -1867,12 +1867,12 @@ PrefabInstance:
     - target: {fileID: 2185982970597936581, guid: a51dcb8ba1a24c64f8b0cd201d339020,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.6
+      value: 12.55
       objectReference: {fileID: 0}
     - target: {fileID: 2185982970597936581, guid: a51dcb8ba1a24c64f8b0cd201d339020,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.21
+      value: -0.94
       objectReference: {fileID: 0}
     - target: {fileID: 2185982970597936581, guid: a51dcb8ba1a24c64f8b0cd201d339020,
         type: 3}
@@ -1902,7 +1902,7 @@ PrefabInstance:
     - target: {fileID: 2185982970597936581, guid: a51dcb8ba1a24c64f8b0cd201d339020,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2185982970597936581, guid: a51dcb8ba1a24c64f8b0cd201d339020,
         type: 3}
@@ -1945,6 +1945,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1381597154751312334, guid: 006b3291b9fa49549864ff78f3a7f39a,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381597154751312334, guid: 006b3291b9fa49549864ff78f3a7f39a,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1381597155559593363, guid: 006b3291b9fa49549864ff78f3a7f39a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1983,7 +1993,7 @@ PrefabInstance:
     - target: {fileID: 1381597155559593363, guid: 006b3291b9fa49549864ff78f3a7f39a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1381597155559593363, guid: 006b3291b9fa49549864ff78f3a7f39a,
         type: 3}
@@ -2065,16 +2075,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 717883106}
-    - target: {fileID: 1381597154751312334, guid: 006b3291b9fa49549864ff78f3a7f39a,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381597154751312334, guid: 006b3291b9fa49549864ff78f3a7f39a,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1381597155559593362, guid: 006b3291b9fa49549864ff78f3a7f39a,
         type: 3}
       propertyPath: m_RenderMode

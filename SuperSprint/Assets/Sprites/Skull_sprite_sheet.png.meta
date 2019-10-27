@@ -1,7 +1,29 @@
 fileFormatVersion: 2
 guid: 86118d3cdf04e06439c767bd5e46dc99
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Skull_sprite_sheet_0
+    21300002: Skull_sprite_sheet_1
+    21300004: Skull_sprite_sheet_2
+    21300006: Skull_sprite_sheet_3
+    21300008: Skull_sprite_sheet_4
+    21300010: Skull_sprite_sheet_5
+    21300012: Skull_sprite_sheet_6
+    21300014: Skull_sprite_sheet_7
+    21300016: Skull_sprite_sheet_8
+    21300018: Skull_sprite_sheet_9
+    21300020: Skull_sprite_sheet_10
+    21300022: Skull_sprite_sheet_11
+    21300024: Skull_sprite_sheet_12
+    21300026: Skull_sprite_sheet_13
+    21300028: Skull_sprite_sheet_14
+    21300030: Skull_sprite_sheet_15
+    21300032: Skull_sprite_sheet_16
+    21300034: Skull_sprite_sheet_17
+    21300036: Skull_sprite_sheet_18
+    21300038: Skull_sprite_sheet_19
+    21300040: Skull_sprite_sheet_20
+    21300042: Skull_sprite_sheet_21
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -40,7 +62,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,9 +91,140 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Skull_sprite_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 47
+        width: 182
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8806dfeb1716ddd4ea6e639776b86fe8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_sprite_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 47
+        width: 182
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77eaf8edf97488b4b9dc8f227f2e5746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_sprite_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 49
+        width: 182
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dab99e09021b4694ea0015ee49ac2e67
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_sprite_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 52
+        width: 182
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f0cbefbae58fa141af2cf892b4ed704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_sprite_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 50
+        width: 182
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 551b94b8efd3a6c42a78e384f3a14077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_sprite_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 47
+        width: 182
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64800417b225850498ce8ddeb9738bf6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
