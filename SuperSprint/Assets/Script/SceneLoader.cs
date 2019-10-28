@@ -11,12 +11,14 @@ public class SceneLoader : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Menu")
         {
             Camera.main.SendMessage("CheckForData");
+            GameObject.FindGameObjectWithTag("Music").GetComponent<Music>().PlayMusic();
         }
     }
 
     public void LoadLevel1()
     {
         SceneManager.LoadScene("Level1");
+        GameObject.FindGameObjectWithTag("Music").GetComponent<Music>().StopMusic();
     }
 
     public void LoadLevel2()
@@ -25,6 +27,7 @@ public class SceneLoader : MonoBehaviour
         {
             SceneManager.LoadScene("Level2");
         }
+        GameObject.FindGameObjectWithTag("Music").GetComponent<Music>().StopMusic();
     }
 
     public void LoadLevel3()
@@ -33,11 +36,13 @@ public class SceneLoader : MonoBehaviour
         {
             Debug.Log("Add a level 3!");
         }
+        GameObject.FindGameObjectWithTag("Music").GetComponent<Music>().StopMusic();
     }
 
     public void LoadMainMenu()
     {
         SceneManager.LoadScene("Menu");
+        GameObject.FindGameObjectWithTag("Music").GetComponent<Music>().PlayMusic();
     }
 
     public void LoadMissionMenu()
