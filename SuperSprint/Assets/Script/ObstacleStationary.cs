@@ -8,26 +8,34 @@ public class ObstacleStationary : MonoBehaviour
     private float damage;
     [SerializeField]
     private int scoreAward;
-    private Rigidbody2D rb;
+    // private Rigidbody2D rb;
     private bool playerHit;
-    private float thrust = 10.0f;
-    BoxCollider2D myCollider;
-
-
-    void Start()
-    {        
-        myCollider = GetComponent<BoxCollider2D>();
-        rb = GetComponent<Rigidbody2D>();
+	private Animator anim;
+	private AudioSource source;
+	[SerializeField]
+	private AudioClip hurtSound;
+    // private float thrust = 10.0f;
+		
+    private void Start()
+    {
+		source = GetComponent<AudioSource>();
+		source.volume = PlayerPrefs.GetInt("IsSound");
+		anim = GetComponent<Animator>();
+        // rb = GetComponent<Rigidbody2D>();
     }
-
+	
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && !playerHit)
         {
             playerHit = true;
-            other.SendMessage("TakeDamage", damage);            
+            other.SendMessage("TakeDamage", damage);
+			anim.SetTrigger("HitPlayer");
+			source.PlayOneShot(hurtSound);			
+			/*
             //Destroy(gameObject);
             rb.bodyType = RigidbodyType2D.Dynamic;
+			*/
         }
     }
 

@@ -10,6 +10,8 @@ public class InvisibillPower : MonoBehaviour
     [SerializeField]
     private float invisTime;
     private SpriteRenderer sprite;
+	private AudioSource source;
+
 
     private void Start()
     {
