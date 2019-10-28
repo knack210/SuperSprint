@@ -103,7 +103,7 @@ public class CharHealth : MonoBehaviour
     {
         if (health <= 0)
         {
-            SceneManager.LoadScene("TutorialLevel");
+            SceneManager.LoadScene("Menu");
         }
     }
 

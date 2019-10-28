@@ -217,7 +217,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 2104607385}
   scorePopup: {fileID: 1428435848}
-  popupLength: 0.3
 --- !u!114 &205167284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,7 +244,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 54a06e342fd34df428a746eb022e239b, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.096
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2060,11 +2059,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1381597154488746505, guid: 006b3291b9fa49549864ff78f3a7f39a,
+    - target: {fileID: 1381597155559593362, guid: 006b3291b9fa49549864ff78f3a7f39a,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 717883104}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1381597153980551430, guid: 006b3291b9fa49549864ff78f3a7f39a,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2075,11 +2074,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 717883106}
-    - target: {fileID: 1381597155559593362, guid: 006b3291b9fa49549864ff78f3a7f39a,
+    - target: {fileID: 1381597154488746505, guid: 006b3291b9fa49549864ff78f3a7f39a,
         type: 3}
-      propertyPath: m_RenderMode
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 717883104}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006b3291b9fa49549864ff78f3a7f39a, type: 3}
 --- !u!1 &5402302801128731199 stripped
@@ -2279,26 +2278,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8773125123803025586, guid: ac71f571f9500ad49b7214c0375129d0,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.6499999
-      objectReference: {fileID: 0}
-    - target: {fileID: 8773125123803025586, guid: ac71f571f9500ad49b7214c0375129d0,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 3.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 7114317455190642381, guid: ac71f571f9500ad49b7214c0375129d0,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -0.9741167
-      objectReference: {fileID: 0}
-    - target: {fileID: 7114317455190642381, guid: ac71f571f9500ad49b7214c0375129d0,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 1.5517666
-      objectReference: {fileID: 0}
     - target: {fileID: 6510814110467985607, guid: ac71f571f9500ad49b7214c0375129d0,
         type: 3}
       propertyPath: goal
@@ -2334,5 +2313,25 @@ PrefabInstance:
       propertyPath: powerBar
       value: 
       objectReference: {fileID: 1495735012}
+    - target: {fileID: 8773125123803025586, guid: ac71f571f9500ad49b7214c0375129d0,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.6499999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773125123803025586, guid: ac71f571f9500ad49b7214c0375129d0,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 3.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 7114317455190642381, guid: ac71f571f9500ad49b7214c0375129d0,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.9741167
+      objectReference: {fileID: 0}
+    - target: {fileID: 7114317455190642381, guid: ac71f571f9500ad49b7214c0375129d0,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.5517666
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac71f571f9500ad49b7214c0375129d0, type: 3}

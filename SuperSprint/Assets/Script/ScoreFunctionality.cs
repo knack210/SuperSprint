@@ -12,9 +12,7 @@ public class ScoreFunctionality : MonoBehaviour
     [SerializeField]
     private Text scoreText;
 	[SerializeField]
-	private TextMeshProUGUI scorePopup;
-	[SerializeField]
-	private float popupLength;
+	private TextMeshProUGUI scorePopup;	
 	     
     private int currentScore;
 
@@ -28,12 +26,15 @@ public class ScoreFunctionality : MonoBehaviour
 
     public void AddScore(int points)
     {
-		TextMeshProUGUI popup = Instantiate(scorePopup, scorePopup.transform);
-		popup.text = "+" + points.ToString();
+        if (points > 0)
+        {
+            TextMeshProUGUI popup = Instantiate(scorePopup, scorePopup.transform);
+            popup.text = "+" + points.ToString();
+            popup.GetComponent<Animator>().SetTrigger("Move");            
 
-		Destroy(popup, popupLength);
-        currentScore += points;
-        UpdateScoreCount();
+            currentScore += points;
+            UpdateScoreCount();
+        }
     }
        
     
