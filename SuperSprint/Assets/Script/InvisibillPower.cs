@@ -15,7 +15,7 @@ public class InvisibillPower : MonoBehaviour
     private void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
-        SendMessage("SetDepletionRate", invisTime);
+        SendMessage("SetDepletionRate", (100 / invisTime) * Time.deltaTime);
     }
 
     private void Update()
@@ -33,10 +33,10 @@ public class InvisibillPower : MonoBehaviour
         sprite.color = new Color(1f, 1f, 1f, .5f);
         SendMessage("EnableInvincibility");
         SendMessage("DisableRegen");
-        Invoke("DisablePower", invisTime);
+        // Invoke("DisablePower", invisTime);
     }
 
-    private void DisablePower()
+    public void DisablePower()
     {
         SendMessage("DisableInvincibility");
         SendMessage("EnableRegen");

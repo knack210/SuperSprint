@@ -79,6 +79,10 @@ public class CharHealth : MonoBehaviour
         {
             power = Mathf.MoveTowards(power, targetPower, depletionRate);
             SetPowerBar();
+			if (power == targetPower)
+			{
+				SendMessage("DisablePower");
+			}
         }
 
         if (power >= powerCost)
