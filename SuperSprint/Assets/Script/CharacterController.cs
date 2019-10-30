@@ -22,22 +22,33 @@ public class CharacterController : MonoBehaviour
     private Vector2 goalLocation;
     private Transform GroundTouch;
     private Animator anim;
+    /*
     [SerializeField]
     private BoxCollider2D standCol;
 	[SerializeField]
 	private BoxCollider2D jumpCol;
     [SerializeField]
     private BoxCollider2D slideCol;
+    */
+    private AudioSource source;
+    [SerializeField]
+    private AudioClip jumpSfx;
+    [SerializeField]
+    private AudioClip slideSfx;
+    [SerializeField]
+    private AudioClip hurtSfx;
 
     private void Start()
     {
         isRunning = true;
+        source = GetComponent<AudioSource>();
+        source.volume = source.volume * PlayerPrefs.GetInt("isSound");
         anim = GetComponent<Animator>();        
         rb = GetComponent<Rigidbody2D>();
         goalLocation = goal.transform.position;
         GroundTouch = this.transform.Find("GroundTouch");
-		jumpCol.enabled = false;
-        slideCol.enabled = false;
+		// jumpCol.enabled = false;
+        // slideCol.enabled = false;
     }
 
     private void Update()
@@ -50,8 +61,8 @@ public class CharacterController : MonoBehaviour
         if (IsOnGround() && anim.GetBool("isJump"))
         {
             anim.SetBool("isJump", false);
-			jumpCol.enabled = false;
-			standCol.enabled = true;
+			//jumpCol.enabled = false;
+			//standCol.enabled = true;
         }
         
         if (Input.GetButtonDown("Jump") && IsOnGround())
@@ -59,17 +70,12 @@ public class CharacterController : MonoBehaviour
             if (isSliding)
 			{
 				SlideEnd();
-				slideCol.enabled = false;
+				//slideCol.enabled = false;
 			}
 
-			else
-			{
-				standCol.enabled = false;
-			}
-			
-            Debug.Log("Grounded");
+            // source.PlayOneShot(jumpSfx);
             anim.SetBool("isJump", true);
-			jumpCol.enabled = true;
+			//jumpCol.enabled = true;
             rb.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
         }
 
@@ -87,11 +93,12 @@ public class CharacterController : MonoBehaviour
 
     private void SlideStart()
     {
+        // source.PlayOneShot(slideSfx);
         Debug.Log("Sliding");
         anim.SetBool("isSlide", true);
         isSliding = true;
-        standCol.enabled = false;
-        slideCol.enabled = true;
+        //standCol.enabled = false;
+        //slideCol.enabled = true;
         Invoke("SlideEnd", slideTime);
     }
 
@@ -100,8 +107,8 @@ public class CharacterController : MonoBehaviour
         Debug.Log("Not sliding");
         CancelInvoke("SlideEnd");
         anim.SetBool("isSlide", false);
-        standCol.enabled = true;
-        slideCol.enabled = false;
+        //standCol.enabled = true;
+        //slideCol.enabled = false;
         isSliding = false;        
     }    
 
@@ -112,6 +119,7 @@ public class CharacterController : MonoBehaviour
 
 	public void IsHurt()
 	{
+        source.PlayOneShot(hurtSfx);
 		anim.SetTrigger("isHurt");
 	}
 }

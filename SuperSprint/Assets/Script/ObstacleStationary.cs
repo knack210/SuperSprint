@@ -14,12 +14,14 @@ public class ObstacleStationary : MonoBehaviour
 	private AudioSource source;
 	[SerializeField]
 	private AudioClip hurtSound;
+    private Camera main;
     // private float thrust = 10.0f;
 		
     private void Start()
     {
+        main = Camera.main;
 		source = GetComponent<AudioSource>();
-		source.volume = PlayerPrefs.GetInt("IsSound");
+		source.volume = source.volume * PlayerPrefs.GetInt("isSound");
 		anim = GetComponent<Animator>();
         // rb = GetComponent<Rigidbody2D>();
     }
@@ -41,9 +43,9 @@ public class ObstacleStationary : MonoBehaviour
 
     private void OnBecameInvisible()
     {
-        if (!playerHit)
-        {
-            Camera.main.SendMessage("AddScore", scoreAward);
+        if (!playerHit && main != null)
+        {           
+            main.SendMessage("AddScore", scoreAward);
         }
 
 		if (gameObject != null)

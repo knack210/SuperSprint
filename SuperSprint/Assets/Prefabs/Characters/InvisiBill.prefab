@@ -40,8 +40,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4828898216120122144}
   - component: {fileID: 8773125123803025586}
-  - component: {fileID: 6588887016342697925}
-  - component: {fileID: 7114317455190642381}
   - component: {fileID: 2312036977920871300}
   - component: {fileID: 6510814110467985607}
   - component: {fileID: 1287744462258803671}
@@ -97,58 +95,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.6, y: 3.5}
   m_EdgeRadius: 0
---- !u!61 &6588887016342697925
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5402302801128731199}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.28}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.6499999, y: 3.52}
-    newSize: {x: 2.23, y: 3.6999998}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.67, y: 4.08}
-  m_EdgeRadius: 0
---- !u!61 &7114317455190642381
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5402302801128731199}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.6}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.6499999, y: 3.52}
-    newSize: {x: 2.23, y: 3.6999998}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3, y: 2.3}
-  m_EdgeRadius: 0
 --- !u!50 &2312036977920871300
 Rigidbody2D:
   serializedVersion: 4
@@ -183,15 +129,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpHeight: 7
-  slideTime: 0.5
+  jumpHeight: 7.5
+  slideTime: 1
   goal: {fileID: 2974725918205494922}
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  standCol: {fileID: 8773125123803025586}
-  jumpCol: {fileID: 6588887016342697925}
-  slideCol: {fileID: 7114317455190642381}
+  jumpSfx: {fileID: 0}
+  slideSfx: {fileID: 0}
+  hurtSfx: {fileID: 8300000, guid: 76828b514c6dff04f89a1905cf7ee042, type: 3}
 --- !u!95 &1287744462258803671
 Animator:
   serializedVersion: 3
@@ -279,6 +225,7 @@ MonoBehaviour:
   powerScore: 20
   regenRate: 10
   invincibleTime: 1
+  powerSfx: {fileID: 8300000, guid: 6629d50a7787f884fad6e0c2959dcec3, type: 3}
 --- !u!114 &6923150100646639061
 MonoBehaviour:
   m_ObjectHideFlags: 0

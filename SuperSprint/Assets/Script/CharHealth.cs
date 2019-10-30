@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CharHealth : MonoBehaviour
-{  
+{
+    private AudioSource source;
     //trashmax comment: changed health to 100f so its not null at start
     private float health = 100f;
     [SerializeField]
@@ -26,14 +27,18 @@ public class CharHealth : MonoBehaviour
     private float maxPower = 100f;
     [SerializeField]
     private float powerCost;
+    private float targetPower;
 	[SerializeField]
 	private int powerScore = 20;
     [SerializeField]
     private float regenRate;
+    private float depletionRate = 0;
     private bool regenActive;
     [SerializeField]
     private float invincibleTime;
     private bool isInvincible;
+    [SerializeField]
+    private AudioClip powerSfx;
     //[SerializeField]
     //private Image healthBar;
     //[SerializieField]
@@ -46,12 +51,12 @@ public class CharHealth : MonoBehaviour
 
     private void Start()
     {
-
+        source = GetComponent<AudioSource>();
 
         //SetHealthBar(); for ui
 
         //TrashMaxCode
-      
+
         SetHealthBar();
         SetPowerBar();
         //Trashmaxcode
@@ -63,23 +68,25 @@ public class CharHealth : MonoBehaviour
     }
 
     private void LateUpdate()
-    {
-   
+    {   
         if ((power < maxPower) && regenActive)
         {
             power = Mathf.MoveTowards(power, maxPower, regenRate * Time.deltaTime);
-
-
-            //trashmaxcode
             SetPowerBar();
-            //trashmaxcode
+        }
 
+        else if ((power > targetPower) && !regenActive)
+        {
+            power = Mathf.MoveTowards(power, targetPower, depletionRate);
+            SetPowerBar();
         }
 
         if (power >= powerCost)
         {
             // Flashing UI element indicating Power is available
         }
+
+        
     }
 
     public void TakeDamage(float damage)
@@ -95,7 +102,7 @@ public class CharHealth : MonoBehaviour
             IsDead();
             EnableInvincibility();
 
-            Invoke(nameof(DisableInvincibility), invincibleTime);
+            // Invoke(nameof(DisableInvincibility), invincibleTime);
         }
     }
 
@@ -122,7 +129,7 @@ public class CharHealth : MonoBehaviour
     {
         powerBar.fillAmount = power / maxPower;
     }
-    //trashmaxcode
+    //trashmaxcode    
 
 
 
@@ -140,9 +147,11 @@ public class CharHealth : MonoBehaviour
     {
         if (power >= powerCost)
         {
-            power -= powerCost;
+            source.PlayOneShot(powerSfx);            
 			Camera.main.SendMessage("AddScore", powerScore);
             SendMessage("ActivatePower");
+            //power -= powerCost;
+            targetPower = power - powerCost;
         }
     }
 
@@ -154,5 +163,10 @@ public class CharHealth : MonoBehaviour
     public void DisableRegen()
     {
         regenActive = false;
+    }
+
+    public void SetDepletionRate(float dRate)
+    {
+        depletionRate = dRate;
     }
 }

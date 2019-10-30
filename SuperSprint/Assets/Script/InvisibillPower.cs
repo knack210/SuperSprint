@@ -10,24 +10,25 @@ public class InvisibillPower : MonoBehaviour
     [SerializeField]
     private float invisTime;
     private SpriteRenderer sprite;
-	private AudioSource source;
 
 
     private void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
+        SendMessage("SetDepletionRate", invisTime);
     }
 
     private void Update()
     {
         if (Input.GetButtonDown("Power"))
         {
+            Debug.Log("Attempt");
             SendMessage("AttemptPower");
         }
     }
 
     public void ActivatePower()
-    {
+    {        
         invisible = true;
         sprite.color = new Color(1f, 1f, 1f, .5f);
         SendMessage("EnableInvincibility");
