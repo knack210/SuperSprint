@@ -1,0 +1,295 @@
+fileFormatVersion: 2
+guid: 75ee24b23debc584082c9e73866245a9
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Basketball_SpriteSheet_2
+    21300002: Basketball_SpriteSheet_1
+    21300004: Basketball_SpriteSheet_2
+    21300006: Basketball_SpriteSheet_3
+    21300008: Basketball_SpriteSheet_4
+    21300010: Basketball_SpriteSheet_5
+    21300012: Basketball_SpriteSheet_6
+    21300014: Basketball_SpriteSheet_7
+    21300016: Basketball_SpriteSheet_0
+    21300018: Basketball_SpriteSheet_9
+    21300020: Basketball_SpriteSheet_10
+    21300022: Basketball_SpriteSheet_11
+    21300024: Basketball_SpriteSheet_12
+    21300026: Basketball_SpriteSheet_13
+    21300028: Basketball_SpriteSheet_14
+    21300030: Basketball_SpriteSheet_15
+    21300032: Basketball_SpriteSheet_16
+    21300034: Basketball_SpriteSheet_17
+    21300036: Basketball_SpriteSheet_18
+    21300038: Basketball_SpriteSheet_19
+    21300040: Basketball_SpriteSheet_20
+    21300042: Basketball_SpriteSheet_21
+    21300044: Basketball_SpriteSheet_22
+    21300046: Basketball_SpriteSheet_23
+    21300048: Basketball_SpriteSheet_24
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Basketball_SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 33
+        width: 442
+        height: 537
+      alignment: 9
+      pivot: {x: 0.49773756, y: 0.40968344}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f1abcacc3089384fabde806a28d9597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basketball_SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 29
+        width: 439
+        height: 441
+      alignment: 9
+      pivot: {x: 0.5011389, y: 0.4988662}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5df25ea0924ec914b872107ff9201576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basketball_SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 29
+        width: 449
+        height: 518
+      alignment: 9
+      pivot: {x: 0.48997772, y: 0.42471042}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f793e6b8d9961f2449f8190f54abcde2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basketball_SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 1588
+        y: 31
+        width: 456
+        height: 443
+      alignment: 9
+      pivot: {x: 0.48245615, y: 0.496614}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 782888bb8cf1a784c9e73373e3f5e8e7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basketball_SpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 2092
+        y: 29
+        width: 487
+        height: 363
+      alignment: 9
+      pivot: {x: 0.4517454, y: 0.6060606}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac9b891997f21fb45ad05b7417c77e22
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basketball_SpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 2599
+        y: 31
+        width: 510
+        height: 293
+      alignment: 9
+      pivot: {x: 0.43137255, y: 0.75085324}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cac19f10b4727a4aa07c6961df9cb83
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basketball_SpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 3116
+        y: 28
+        width: 516
+        height: 301
+      alignment: 9
+      pivot: {x: 0.42635658, y: 0.730897}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15e7988068a038d46aa34f5dd984774b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basketball_SpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 3633
+        y: 33
+        width: 510
+        height: 297
+      alignment: 9
+      pivot: {x: 0.43137255, y: 0.7407407}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5885dcad319115846b98aedd6eaa91a0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: d04359676f4b3cf4ba13634b896f2ef5
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 6559123079370939299}
   - component: {fileID: 7787625303477756724}
   - component: {fileID: 2249523410227514457}
+  - component: {fileID: 6759232076381739729}
+  - component: {fileID: 6477448192001734608}
   m_Layer: 0
   m_Name: FlyFlops
   m_TagString: Player
@@ -157,9 +159,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  standCol: {fileID: 5449322697084644141}
-  jumpCol: {fileID: 9060281120287042195}
-  slideCol: {fileID: 6870420359416289135}
+  jumpSfx: {fileID: 0}
+  slideSfx: {fileID: 0}
+  hurtSfx: {fileID: 0}
 --- !u!95 &6559123079370939299
 Animator:
   serializedVersion: 3
@@ -247,6 +249,33 @@ MonoBehaviour:
   powerScore: 0
   regenRate: 10
   invincibleTime: 1
+  powerSfx: {fileID: 0}
+--- !u!114 &6759232076381739729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892188149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d19d0b75b060cc42bcab7fa4b186db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectSwipeOnlyAfterRelease: 0
+  minDistanceForSwipe: 20
+--- !u!114 &6477448192001734608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892188149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 869aaf1313bc84049aa7a927ac10336f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8210197981613247897
 GameObject:
   m_ObjectHideFlags: 0
