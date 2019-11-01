@@ -16,16 +16,7 @@ public class InvisibillPower : MonoBehaviour
     {
         sprite = GetComponent<SpriteRenderer>();
         SendMessage("SetDepletionRate", (100 / invisTime) * Time.deltaTime);
-    }
-
-    private void Update()
-    {
-        if (Input.GetButtonDown("Power"))
-        {
-            Debug.Log("Attempt");
-            SendMessage("AttemptPower");
-        }
-    }
+    }    
 
     public void ActivatePower()
     {        

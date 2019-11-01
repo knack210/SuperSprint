@@ -90,6 +90,10 @@ public class CharHealth : MonoBehaviour
             // Flashing UI element indicating Power is available
         }
 
+        if (Input.GetButtonDown("Power"))
+        {
+            AttemptPower();
+        }
         
     }
 
@@ -147,7 +151,7 @@ public class CharHealth : MonoBehaviour
         isInvincible = false;
     }
 
-    public void AttemptPower()
+    private void AttemptPower()
     {
         if (power >= powerCost)
         {

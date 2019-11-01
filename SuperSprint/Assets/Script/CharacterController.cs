@@ -65,21 +65,12 @@ public class CharacterController : MonoBehaviour
 			//standCol.enabled = true;
         }
         
-        if (Input.GetButtonDown("Jump") && IsOnGround())
+        if (Input.GetButtonDown("Jump") && IsOnGround()) // Set to gesture up
         {
-            if (isSliding)
-			{
-				SlideEnd();
-				//slideCol.enabled = false;
-			}
-
-            // source.PlayOneShot(jumpSfx);
-            anim.SetBool("isJump", true);
-			//jumpCol.enabled = true;
-            rb.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
+            CallJump();
         }
 
-        if (Input.GetButtonDown("Slide") && IsOnGround() && !isSliding)
+        if (Input.GetButtonDown("Slide") && IsOnGround() && !isSliding) // Set to gesture down
         {
             SlideStart();
         }
@@ -89,6 +80,20 @@ public class CharacterController : MonoBehaviour
     {
         
         return Physics2D.OverlapCircle(GroundTouch.position, 0.1f,  groundLayer);
+    }
+
+    private void CallJump()
+    {
+        if (isSliding)
+        {
+            SlideEnd();
+            //slideCol.enabled = false;
+        }
+
+        // source.PlayOneShot(jumpSfx);
+        anim.SetBool("isJump", true);
+        //jumpCol.enabled = true;
+        rb.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
     }
 
     private void SlideStart()
