@@ -12,7 +12,7 @@ public class ScoreFunctionality : MonoBehaviour
     [SerializeField]
     private Text scoreText;
 	[SerializeField]
-	private TextMeshProUGUI scorePopup;	
+	private TextMeshProUGUI scorePopup;    
 	     
     private int currentScore;
 
@@ -21,7 +21,10 @@ public class ScoreFunctionality : MonoBehaviour
     {
         currentScore = 0;
 		UpdateScoreCount();
-		scorePopup.text = "";        
+        if (scorePopup != null)
+        {
+            scorePopup.text = "";
+        }
     }
 
     public void AddScore(int points)

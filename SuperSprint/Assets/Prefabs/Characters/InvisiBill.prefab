@@ -138,7 +138,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   jumpSfx: {fileID: 0}
-  slideSfx: {fileID: 0}
+  slideSfx: {fileID: 8300000, guid: 079f1d02132608a488c5178820b41a2c, type: 3}
   hurtSfx: {fileID: 8300000, guid: 76828b514c6dff04f89a1905cf7ee042, type: 3}
 --- !u!95 &1287744462258803671
 Animator:
@@ -222,6 +222,7 @@ MonoBehaviour:
   maxHealth: 100
   healthBar: {fileID: 0}
   powerBar: {fileID: 0}
+  PoorMansParticle: {fileID: 0}
   maxPower: 100
   powerCost: 100
   powerScore: 20

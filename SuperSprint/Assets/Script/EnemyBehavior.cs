@@ -57,7 +57,8 @@ public class EnemyBehavior: MonoBehaviour
         {
             Camera.main.SendMessage("AddScore", scoreAward);
         }
-        Destroy(gameObject);
+
+        Destroy(this.gameObject);
     }
 
     private void AttackOverride()
@@ -68,6 +69,12 @@ public class EnemyBehavior: MonoBehaviour
     public void PlaySound()
     {
         source.PlayOneShot(entryNoise);
+    }
+
+    public void HitByLaser()
+    {
+        hitPlayer = true;
+        Destroy(this.gameObject);
     }
 
 }

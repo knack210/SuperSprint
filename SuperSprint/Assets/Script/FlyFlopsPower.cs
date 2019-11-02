@@ -7,7 +7,7 @@ public class FlyFlopsPower : MonoBehaviour
     [SerializeField]
     private GameObject lazer;
     [SerializeField]
-    private Transform lazerSpawn; 
+    private Transform lazerSpawn;     
     [SerializeField]
     private float cooldownTime;
     private float cooldownWindow = 0;
@@ -17,8 +17,8 @@ public class FlyFlopsPower : MonoBehaviour
     private RaycastHit2D target;
 
     private void Start()
-    {
-        this.SendMessage("DepletionRate", 100);
+    {        
+        this.SendMessage("SetDepletionRate", 100);
     }
 
     private void Update()
@@ -31,15 +31,18 @@ public class FlyFlopsPower : MonoBehaviour
 
     public void ActivatePower()
     {
-        target = Physics2D.BoxCast(Vector2.zero, BoxSize(), 0, Vector2.right, Screen.width, enemyLayer);
+        target = Physics2D.BoxCast(Vector2.zero, BoxSize(), 0, Vector2.right, Camera.main.scaledPixelWidth, enemyLayer);
         if (target && (cooldownWindow < Time.time))
         {
-            this.SendMessage("DisableRegen");
-            GameObject lazerInstance = Instantiate(lazer, lazerSpawn);
+            Debug.Log("DetectedEnemy");
+            this.SendMessage("DisableRegen");            
+            GameObject lazerInstance = Instantiate(lazer, lazerSpawn.position, Quaternion.identity) as GameObject;
+            lazerInstance.name = "LazerShot";
             lazerInstance.SendMessage("SetTarget", target.transform.gameObject);
+            cooldownWindow = Time.time + cooldownTime;
         }
 
-        else
+        else if (!target)
         {
             Debug.Log("Miss");
         }

@@ -109,8 +109,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   jumpSfx: {fileID: 0}
-  slideSfx: {fileID: 0}
-  hurtSfx: {fileID: 0}
+  slideSfx: {fileID: 8300000, guid: 079f1d02132608a488c5178820b41a2c, type: 3}
+  hurtSfx: {fileID: 8300000, guid: 76828b514c6dff04f89a1905cf7ee042, type: 3}
 --- !u!95 &6559123079370939299
 Animator:
   serializedVersion: 3
@@ -195,7 +195,7 @@ MonoBehaviour:
   powerBar: {fileID: 0}
   PoorMansParticle: {fileID: 0}
   maxPower: 100
-  powerCost: 0
+  powerCost: 33
   powerScore: 0
   regenRate: 10
   invincibleTime: 1
@@ -364,7 +364,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5297912432269198389}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.01, y: 0.76, z: 0}
+  m_LocalPosition: {x: 2.47, y: 0.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3187273685216457201}

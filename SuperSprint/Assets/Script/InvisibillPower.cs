@@ -15,7 +15,7 @@ public class InvisibillPower : MonoBehaviour
     private void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
-        SendMessage("SetDepletionRate", (100 / invisTime) * Time.deltaTime);
+        SendMessage("SetDepletionRate", (100 / invisTime) * Time.fixedDeltaTime);
     }    
 
     public void ActivatePower()

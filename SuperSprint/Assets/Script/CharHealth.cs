@@ -67,7 +67,9 @@ public class CharHealth : MonoBehaviour
 
        
         power = 0;
-        regenActive = true;    
+        regenActive = true;
+
+        Debug.Log("Depeletion rate is " + depletionRate);
     }
 
     private void LateUpdate()
@@ -97,7 +99,7 @@ public class CharHealth : MonoBehaviour
 
 
         //trashmax
-        if (power < maxPower)
+        if (power < powerCost)
         {
             DisableParticle();
         }
@@ -200,5 +202,35 @@ public class CharHealth : MonoBehaviour
     public void DisableParticle()
     {
         PoorMansParticle.SetActive(false);
+    }
+
+    public void RestoreHealth(float amt)
+    {
+        if ((health + amt) < maxHealth)
+        {
+            health = health + amt;
+        }
+
+        else
+        {
+            health = maxHealth;
+        }
+
+        SetHealthBar();
+    }
+
+    public void RestorePower(float amt)
+    {
+        if ((power + amt) < maxPower)
+        {
+            power = power + amt;
+        }
+
+        else
+        {
+            power = maxPower;
+        }
+
+        SetPowerBar();
     }
 }

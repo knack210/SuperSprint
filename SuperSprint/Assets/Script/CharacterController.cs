@@ -111,7 +111,7 @@ public class CharacterController : MonoBehaviour
 
     private void SlideStart()
     {
-        // source.PlayOneShot(slideSfx);
+        source.PlayOneShot(slideSfx);
         Debug.Log("Sliding");
         anim.SetBool("isSlide", true);
         isSliding = true;
