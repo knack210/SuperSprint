@@ -19,6 +19,9 @@ public class CharHealth : MonoBehaviour
     [SerializeField]
     private Image powerBar;
     //TrashMaxCode
+
+    [SerializeField]
+    private GameObject PoorMansParticle;
  
 
 
@@ -88,7 +91,17 @@ public class CharHealth : MonoBehaviour
         if (power >= powerCost)
         {
             // Flashing UI element indicating Power is available
+            EnableParticleWhenPowerIsFull();
         }
+
+
+
+        //trashmax
+        if (power < maxPower)
+        {
+            DisableParticle();
+        }
+
 
         if (Input.GetButtonDown("Power"))
         {
@@ -176,5 +189,16 @@ public class CharHealth : MonoBehaviour
     public void SetDepletionRate(float dRate)
     {
         depletionRate = dRate;
+    }
+
+
+    public void EnableParticleWhenPowerIsFull()
+    {
+        PoorMansParticle.SetActive(true);
+    }
+
+    public void DisableParticle()
+    {
+        PoorMansParticle.SetActive(false);
     }
 }

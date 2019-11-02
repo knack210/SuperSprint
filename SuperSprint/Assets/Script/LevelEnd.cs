@@ -11,6 +11,8 @@ public class LevelEnd : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField]
     private GameObject levelCompleteMenu;
+    [SerializeField]
+    private GameObject levelHighScoreMenu;
 
     private void Start()
     {
@@ -43,5 +45,19 @@ public class LevelEnd : MonoBehaviour
 
             levelCompleteMenu.SetActive(true);
         }
+    }
+
+
+    public void EnableLevelCompletedMenu()
+    {
+        levelHighScoreMenu.SetActive(false);
+        levelCompleteMenu.SetActive(true);
+    }
+
+
+    public void EnableHighScoresScreen()
+    {
+        levelCompleteMenu.SetActive(false);
+        levelHighScoreMenu.SetActive(true);
     }
 }
