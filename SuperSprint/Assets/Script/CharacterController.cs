@@ -82,20 +82,20 @@ public class CharacterController : MonoBehaviour
         return check;
     }
 
-    private void SwipeDetect_OnSwipe(SwipeData data)
+    /*private void SwipeDetect_OnSwipe(SwipeData data)
     {
-        if (data.Direction == SwipeDirection.Up)
+        if (data.Direction == SwipeDetection.Up)
         {
             CallJump();
         }
 
-        if (data.Direction == SwipeDirection.Down)
+        if (data.Direction == SwipeDetection.Down)
         {
             SlideStart();
         }
-    }
+    }*/
 
-    private void CallJump()
+    public void CallJump()
     {
         if (isSliding)
         {
@@ -109,7 +109,7 @@ public class CharacterController : MonoBehaviour
         rb.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
     }
 
-    private void SlideStart()
+    public void SlideStart()
     {
         source.PlayOneShot(slideSfx);
         Debug.Log("Sliding");

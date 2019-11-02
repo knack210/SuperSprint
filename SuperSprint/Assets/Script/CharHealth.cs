@@ -144,8 +144,6 @@ public class CharHealth : MonoBehaviour
         healthBar.fillAmount = health / maxHealth;
         //trashmaxcode
     }
-
-
     //trashmaxcode
 
     private void SetPowerBar()
@@ -153,8 +151,6 @@ public class CharHealth : MonoBehaviour
         powerBar.fillAmount = power / maxPower;
     }
     //trashmaxcode    
-
-
 
 	public void EnableInvincibility()
     {
@@ -166,7 +162,7 @@ public class CharHealth : MonoBehaviour
         isInvincible = false;
     }
 
-    private void AttemptPower()
+    public void AttemptPower()
     {
         if (power >= powerCost)
         {
