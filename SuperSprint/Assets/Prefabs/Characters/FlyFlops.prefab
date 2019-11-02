@@ -193,6 +193,7 @@ MonoBehaviour:
   maxHealth: 100
   healthBar: {fileID: 0}
   powerBar: {fileID: 0}
+  PoorMansParticle: {fileID: 0}
   maxPower: 100
   powerCost: 0
   powerScore: 0
@@ -333,8 +334,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 021b5a0b19ef60e4087fd2b969d88354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lazer: {fileID: 0}
-  laserSpawn: {fileID: 8242295967125965962}
+  lazer: {fileID: 6891358686743717385, guid: 7cb8431f55838a3489668c0b4adcef76, type: 3}
+  lazerSpawn: {fileID: 8242295967125965962}
+  cooldownTime: 0.5
   enemyLayer:
     serializedVersion: 2
     m_Bits: 1024
