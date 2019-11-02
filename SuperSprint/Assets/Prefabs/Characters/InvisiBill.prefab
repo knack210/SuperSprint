@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 449482355714809681}
   - component: {fileID: 3217695533026030502}
   - component: {fileID: 9026827570084081266}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: InvisiBill
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -350,8 +350,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d19d0b75b060cc42bcab7fa4b186db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectSwipeOnlyAfterRelease: 0
-  minDistanceForSwipe: 20
+  detectSwipeOnlyAfterRelease: 1
+  minDistanceForSwipe: 5
 --- !u!114 &9026827570084081266
 MonoBehaviour:
   m_ObjectHideFlags: 0

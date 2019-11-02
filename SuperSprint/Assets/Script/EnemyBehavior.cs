@@ -46,7 +46,8 @@ public class EnemyBehavior: MonoBehaviour
 
     private void OnBecameVisible()
     {
-        source.PlayOneShot(entryNoise);
+        Debug.Log("Approaching");
+        PlaySound();
         active = true;
     }
 
@@ -57,6 +58,16 @@ public class EnemyBehavior: MonoBehaviour
             Camera.main.SendMessage("AddScore", scoreAward);
         }
         Destroy(gameObject);
+    }
+
+    private void AttackOverride()
+    {
+        active = false;
+    }
+
+    public void PlaySound()
+    {
+        source.PlayOneShot(entryNoise);
     }
 
 }

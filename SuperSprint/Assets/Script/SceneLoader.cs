@@ -69,7 +69,7 @@ public class SceneLoader : MonoBehaviour
     }
 
     // Debug, remove for final build
-    private void Update()
+    /*private void Update()
     {
         if (Input.GetKeyDown(KeyCode.U))
         {
@@ -86,5 +86,5 @@ public class SceneLoader : MonoBehaviour
             PlayerPrefs.SetInt("isLevel3", 0);
 
         }
-    }
+    }*/
 }

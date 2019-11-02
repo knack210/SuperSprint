@@ -78,8 +78,21 @@ public class CharacterController : MonoBehaviour
 
    private bool IsOnGround()
     {
-        
-        return Physics2D.OverlapCircle(GroundTouch.position, 0.1f,  groundLayer);
+        bool check = Physics2D.OverlapCircle(GroundTouch.position, 0.1f, groundLayer);
+        return check;
+    }
+
+    private void SwipeDetect_OnSwipe(SwipeData data)
+    {
+        if (data.Direction == SwipeDirection.Up)
+        {
+            CallJump();
+        }
+
+        if (data.Direction == SwipeDirection.Down)
+        {
+            SlideStart();
+        }
     }
 
     private void CallJump()

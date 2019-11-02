@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2738219073920130245}
   - component: {fileID: 2738219073920130246}
   - component: {fileID: 3395361330110169570}
+  - component: {fileID: 6007492604356732572}
   m_Layer: 10
   m_Name: Bird
   m_TagString: Enemy
@@ -308,3 +309,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6007492604356732572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2738219073920130247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e5ee0909244fe4f8953c30efd1458c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionRange: 10
+  downwardSwoopLocation: 10
+  downwardSwoopSpeed: 4
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 512
