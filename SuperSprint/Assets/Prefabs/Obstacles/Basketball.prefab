@@ -160,7 +160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 20
   scoreAward: 5
-  hurtSound: {fileID: 8300000, guid: 487954c673511b94fa1a6d3120229b92, type: 3}
+  hurtSound: {fileID: 8300000, guid: 2f4fbda265b2c5143a58558d3ec9ffa5, type: 3}
 --- !u!95 &3266614111895536061
 Animator:
   serializedVersion: 3

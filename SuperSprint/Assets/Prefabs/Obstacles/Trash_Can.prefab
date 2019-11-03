@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 20
   scoreAward: 5
-  hurtSound: {fileID: 8300000, guid: 487954c673511b94fa1a6d3120229b92, type: 3}
+  hurtSound: {fileID: 8300000, guid: ab2cb57a30f183643945be8336d78bb7, type: 3}
 --- !u!60 &7468819435792074802
 PolygonCollider2D:
   m_ObjectHideFlags: 0

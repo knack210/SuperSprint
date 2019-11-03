@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb74e6dac6e6777429a987b62ea3d201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSliding: 0
   speed: 5
   jumpHeight: 7
   slideTime: 1
@@ -108,9 +109,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  jumpSfx: {fileID: 8300000, guid: 1c1ed76ef952a264e9aa0af7110a02c1, type: 3}
+  jumpSfx: {fileID: 8300000, guid: 03d8be5d6bae860478c51f9c8cecfb30, type: 3}
   slideSfx: {fileID: 8300000, guid: 079f1d02132608a488c5178820b41a2c, type: 3}
-  hurtSfx: {fileID: 8300000, guid: 6c8c555aca88486499c62de9cf815728, type: 3}
+  hurtSfx: {fileID: 8300000, guid: cc8f5cabd4a1f4d48a21e8267cff56d3, type: 3}
 --- !u!95 &6559123079370939299
 Animator:
   serializedVersion: 3

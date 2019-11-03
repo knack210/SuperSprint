@@ -45,9 +45,7 @@ public class CharHealth : MonoBehaviour
     //[SerializeField]
     //private Image healthBar;
     //[SerializieField]
-    //private Image powerBar;
-
-                     
+    //private Image powerBar;                   
 
    
 
@@ -93,13 +91,12 @@ public class CharHealth : MonoBehaviour
         if (power >= powerCost)
         {
             // Flashing UI element indicating Power is available
+            Debug.Log("Ready");
             EnableParticleWhenPowerIsFull();
         }
-
-
-
+               
         //trashmax
-        if (power < powerCost)
+        else if (power < powerCost)
         {
             DisableParticle();
         }
@@ -112,7 +109,7 @@ public class CharHealth : MonoBehaviour
         
     }
 
-    public void TakeDamage(float damage)
+    public virtual void TakeDamage(float damage)
     {
         if (!isInvincible)
         {
@@ -123,7 +120,7 @@ public class CharHealth : MonoBehaviour
 
 			SendMessage("SlideEnd");
             IsDead();
-            // EnableInvincibility();
+            EnableInvincibility();
 
             // Invoke(nameof(DisableInvincibility), invincibleTime);
         }

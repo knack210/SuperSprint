@@ -37,11 +37,11 @@ public class EnemyBehavior: MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && !hitPlayer)
         {
             hitPlayer = true;
             other.SendMessage("TakeDamage", damage);            
-        }
+        }       
     }
 
     private void OnBecameVisible()

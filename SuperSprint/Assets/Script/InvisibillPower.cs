@@ -10,10 +10,12 @@ public class InvisibillPower : MonoBehaviour
     [SerializeField]
     private float invisTime;
     private SpriteRenderer sprite;
+    private Animator anim;
 
 
     private void Start()
     {
+        anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
         SendMessage("SetDepletionRate", (100 / invisTime) * Time.fixedDeltaTime);
     }    
@@ -21,7 +23,7 @@ public class InvisibillPower : MonoBehaviour
     public void ActivatePower()
     {        
         invisible = true;
-        sprite.color = new Color(1f, 1f, 1f, .5f);
+        sprite.color = new Color(1f, 1f, 1f, .5f);        
         SendMessage("EnableInvincibility");
         SendMessage("DisableRegen");
         // Invoke("DisablePower", invisTime);
@@ -35,11 +37,22 @@ public class InvisibillPower : MonoBehaviour
         sprite.color = new Color(1f, 1f, 1f, 1f);
     }
 
-    public void TakeDamage()
-    {
+    public void TakeDamage(float damage)
+    {        
         if (invisible)
         {
             Camera.main.SendMessage("AddScore", invisScore);
         }
+    }
+
+    // Ugly function to fix Invisibill
+    public void InvisibillDisableInvincibility()
+    {
+        if (!invisible)
+        {
+            Debug.Log("Not invisible");
+            SendMessage("DisableInvincibility");
+        }
+
     }
 }
