@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterController : MonoBehaviour
 {
     private bool isRunning;
-    private bool isSliding;
+    public bool isSliding;
     [SerializeField]
     private float speed;
     [SerializeField]
@@ -76,7 +76,7 @@ public class CharacterController : MonoBehaviour
         }
     }
 
-   private bool IsOnGround()
+   public bool IsOnGround()
     {
         bool check = Physics2D.OverlapCircle(GroundTouch.position, 0.1f, groundLayer);
         return check;

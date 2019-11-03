@@ -91,11 +91,11 @@ public class SwipeDetect : MonoBehaviour
         };
         OnSwipe(swipeData);
 
-        if (direction == SwipeDirection.Up)
+        if (direction == SwipeDirection.Up && controller.IsOnGround())
         {
             controller.CallJump();
         }
-        else if (direction == SwipeDirection.Down)
+        else if (direction == SwipeDirection.Down && controller.IsOnGround() && !controller.isSliding)
         {
             controller.SlideStart();
         }
