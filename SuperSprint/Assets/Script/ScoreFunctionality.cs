@@ -12,7 +12,15 @@ public class ScoreFunctionality : MonoBehaviour
     [SerializeField]
     private Text scoreText;
 	[SerializeField]
-	private TextMeshProUGUI scorePopup;    
+	private TextMeshProUGUI scorePopup;
+    
+
+    //additional texts for levelcomplete and levelcomplete high score menus
+    [SerializeField]
+    private Text scoreTextInsideLevelCompleteMenu;
+
+    [SerializeField]
+    private Text scoreTextInsideLevelHighScoresMenu;
 	     
     private int currentScore;
 
@@ -37,6 +45,10 @@ public class ScoreFunctionality : MonoBehaviour
 
             currentScore += points;
             UpdateScoreCount();
+
+            //updates inside level end menus
+            UpdateScoreCountInLevelCompleteMenu();
+            UpdateScoreCountInLevelHighScoresMenu();
         }
     }
        
@@ -49,7 +61,27 @@ public class ScoreFunctionality : MonoBehaviour
 		}
     }
 
-	private void PopUpScore()
+
+
+    //updates score in both level completemenus
+    private void UpdateScoreCountInLevelCompleteMenu()
+    {
+        if (scoreTextInsideLevelCompleteMenu != null)
+        {
+            scoreTextInsideLevelCompleteMenu.text =  currentScore.ToString();
+        }
+    }
+
+    private void UpdateScoreCountInLevelHighScoresMenu()
+    {
+        if (scoreTextInsideLevelHighScoresMenu != null)
+        {
+            scoreTextInsideLevelHighScoresMenu.text = currentScore.ToString();
+        }
+    }
+
+
+    private void PopUpScore()
 	{
 
 	}
