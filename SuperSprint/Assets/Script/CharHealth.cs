@@ -123,7 +123,7 @@ public class CharHealth : MonoBehaviour
 
 			SendMessage("SlideEnd");
             IsDead();
-            EnableInvincibility();
+            // EnableInvincibility();
 
             // Invoke(nameof(DisableInvincibility), invincibleTime);
         }

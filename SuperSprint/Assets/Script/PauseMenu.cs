@@ -5,11 +5,22 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
 
-    public static bool GameIsPaused = false;
-    public GameObject pauseMenuUI;
+    private static bool GameIsPaused;
+    [SerializeField]
+    private GameObject pauseMenuUI;
 
-    public GameObject pauseMenuButton;
-    public GameObject ResumeGameButton;
+    [SerializeField]
+    private GameObject pauseMenuButton;
+    [SerializeField]
+    private GameObject ResumeGameButton;
+    [SerializeField]
+    private GameObject powerButton;
+
+
+    private void Start()
+    {
+        Resume();
+    }
 
     // Update is called once per frame
     void Update()
@@ -34,6 +45,7 @@ public class PauseMenu : MonoBehaviour
     {
         ResumeGameButton.SetActive(false);
         pauseMenuButton.SetActive(true);
+        powerButton.SetActive(true);
 
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
@@ -43,6 +55,7 @@ public class PauseMenu : MonoBehaviour
    public void Pause()
     {
         pauseMenuButton.SetActive(false);
+        powerButton.SetActive(false);
         ResumeGameButton.SetActive(true);
 
 

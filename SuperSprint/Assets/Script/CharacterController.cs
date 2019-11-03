@@ -103,7 +103,7 @@ public class CharacterController : MonoBehaviour
             //slideCol.enabled = false;
         }
 
-        // source.PlayOneShot(jumpSfx);
+        source.PlayOneShot(jumpSfx);
         anim.SetBool("isJump", true);
         //jumpCol.enabled = true;
         rb.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);

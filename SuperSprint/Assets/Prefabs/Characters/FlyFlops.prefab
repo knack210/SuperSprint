@@ -108,9 +108,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  jumpSfx: {fileID: 0}
+  jumpSfx: {fileID: 8300000, guid: 1c1ed76ef952a264e9aa0af7110a02c1, type: 3}
   slideSfx: {fileID: 8300000, guid: 079f1d02132608a488c5178820b41a2c, type: 3}
-  hurtSfx: {fileID: 8300000, guid: 76828b514c6dff04f89a1905cf7ee042, type: 3}
+  hurtSfx: {fileID: 8300000, guid: 6c8c555aca88486499c62de9cf815728, type: 3}
 --- !u!95 &6559123079370939299
 Animator:
   serializedVersion: 3
@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d19d0b75b060cc42bcab7fa4b186db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectSwipeOnlyAfterRelease: 0
+  detectSwipeAfterRelease: 1
   minDistanceForSwipe: 20
 --- !u!114 &6477448192001734608
 MonoBehaviour:
