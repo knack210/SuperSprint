@@ -13,11 +13,13 @@ public class FlyFlopsPower : MonoBehaviour
     private float cooldownWindow = 0;
     [SerializeField]
     private LayerMask enemyLayer;
+	private Camera _camera;
 
     private RaycastHit2D target;
 
     private void Start()
-    {        
+    {
+		_camera = Camera.main;
         this.SendMessage("SetDepletionRate", 100);
     }
 
@@ -31,7 +33,7 @@ public class FlyFlopsPower : MonoBehaviour
 
     public void ActivatePower()
     {
-        target = Physics2D.BoxCast(Vector2.zero, BoxSize(), 0, Vector2.right, Camera.main.scaledPixelWidth, enemyLayer);
+        target = Physics2D.BoxCast(Vector2.zero, BoxSize(), 0, Vector2.right, _camera.scaledPixelWidth, enemyLayer);
         if (target && (cooldownWindow < Time.time))
         {
             Debug.Log("DetectedEnemy");

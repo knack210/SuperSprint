@@ -22,7 +22,8 @@ public class CharHealth : MonoBehaviour
 
     [SerializeField]
     private GameObject PoorMansParticle;
- 
+
+	
 
 
     private float power;
@@ -30,7 +31,10 @@ public class CharHealth : MonoBehaviour
     private float maxPower = 100f;
     [SerializeField]
     private float powerCost;
-    private float targetPower;
+	[SerializeField]
+	private bool powerRequireGround;
+	private CharacterController GetGrounded;
+	private float targetPower;
 	[SerializeField]
 	private int powerScore = 20;
     [SerializeField]
@@ -52,7 +56,8 @@ public class CharHealth : MonoBehaviour
 
     private void Start()
     {
-        source = GetComponent<AudioSource>();
+		GetGrounded = this.gameObject.GetComponent<CharacterController>();
+		source = GetComponent<AudioSource>();
 
         //SetHealthBar(); for ui
 
@@ -67,7 +72,7 @@ public class CharHealth : MonoBehaviour
         power = 0;
         regenActive = true;
 
-        Debug.Log("Depeletion rate is " + depletionRate);
+        // Debug.Log("Depeletion rate is " + depletionRate);
     }
 
     private void LateUpdate()
@@ -91,7 +96,7 @@ public class CharHealth : MonoBehaviour
         if (power >= powerCost)
         {
             // Flashing UI element indicating Power is available
-            Debug.Log("Ready");
+            // Debug.Log("Ready");
             EnableParticleWhenPowerIsFull();
         }
                
@@ -161,7 +166,7 @@ public class CharHealth : MonoBehaviour
 
     public void AttemptPower()
     {
-        if (power >= powerCost)
+        if (power >= powerCost && (powerRequireGround ? GetGrounded.IsOnGround() : true))
         {
             source.PlayOneShot(powerSfx);            
 			Camera.main.SendMessage("AddScore", powerScore);

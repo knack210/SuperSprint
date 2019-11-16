@@ -17,9 +17,11 @@ public class EnemyBehavior: MonoBehaviour
     [SerializeField]
     private AudioClip entryNoise;
     PolygonCollider2D myCollider;
+	private Camera _camera;
 
-    private void Start()
+	private void Start()
     {
+		_camera = Camera.main;
         rb = GetComponent<Rigidbody2D>();
         myCollider = GetComponent<PolygonCollider2D>();
         source = GetComponent<AudioSource>();
@@ -53,9 +55,9 @@ public class EnemyBehavior: MonoBehaviour
 
     private void OnBecameInvisible()
     {
-        if (!hitPlayer)
+        if (!hitPlayer && _camera != null)
         {
-            Camera.main.SendMessage("AddScore", scoreAward);
+            _camera.SendMessage("AddScore", scoreAward);
         }
 
         Destroy(this.gameObject);
@@ -76,5 +78,11 @@ public class EnemyBehavior: MonoBehaviour
         hitPlayer = true;
         Destroy(this.gameObject);
     }
+
+	public void HitByShockwave()
+	{
+		Debug.Log("Enemy hit!");
+		HitByLaser();
+	}
 
 }

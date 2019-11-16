@@ -14,12 +14,12 @@ public class ObstacleStationary : MonoBehaviour
 	private AudioSource source;
 	[SerializeField]
 	private AudioClip hurtSound;
-    private Camera main;
+    private Camera _camera;
     // private float thrust = 10.0f;
 		
     private void Start()
     {
-        main = Camera.main;
+        _camera = Camera.main;
 		source = GetComponent<AudioSource>();
 		source.volume = source.volume * PlayerPrefs.GetInt("isSound");
 		anim = GetComponent<Animator>();
@@ -43,9 +43,9 @@ public class ObstacleStationary : MonoBehaviour
 
     private void OnBecameInvisible()
     {
-        if (!playerHit && main != null)
+        if (!playerHit && _camera != null)
         {           
-            main.SendMessage("AddScore", scoreAward);
+            _camera.SendMessage("AddScore", scoreAward);
         }
 
 		if (gameObject != null)
@@ -53,4 +53,11 @@ public class ObstacleStationary : MonoBehaviour
 			Destroy(gameObject);
 		}
     }
+
+	public void HitByShockwave()
+	{
+		Debug.Log("Obstacle hit!");
+		playerHit = true;
+		Destroy(this.gameObject);
+	}
 }

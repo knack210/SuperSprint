@@ -9,8 +9,14 @@ public class LazerController : MonoBehaviour
     [SerializeField]
     private float pointsAwarded;
     private GameObject target;
-    
-    private void Update()
+	private Camera _camera;
+
+	private void Start()
+	{
+		_camera = Camera.main;
+	}
+
+	private void Update()
     {
         if (target != null)
         {
@@ -21,7 +27,7 @@ public class LazerController : MonoBehaviour
 
     private void OnTriggerEnter2D (Collider2D other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy") && _camera != null)
         {
             Debug.Log("Ouch");
             other.SendMessage("HitByLaser");
@@ -30,7 +36,12 @@ public class LazerController : MonoBehaviour
         }
     }
 
-    private void SetTarget (GameObject hit)
+	private void OnBecameInvisible()
+	{
+		Destroy(this.gameObject);
+	}
+
+	private void SetTarget (GameObject hit)
     {
         target = hit;        
     }
