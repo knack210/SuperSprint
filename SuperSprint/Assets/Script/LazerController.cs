@@ -31,7 +31,7 @@ public class LazerController : MonoBehaviour
         {
             Debug.Log("Ouch");
             other.SendMessage("HitByLaser");
-            Camera.main.SendMessage("AddScore", pointsAwarded);
+            _camera.SendMessage("AddScore", pointsAwarded);
             Destroy(this.gameObject, Time.deltaTime);
         }
     }
@@ -50,5 +50,4 @@ public class LazerController : MonoBehaviour
     {
         return target.transform.position;
     }
-        
 }
