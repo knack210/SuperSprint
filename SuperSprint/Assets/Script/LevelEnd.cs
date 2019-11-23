@@ -13,6 +13,7 @@ public class LevelEnd : MonoBehaviour
     private GameObject levelCompleteMenu;
     [SerializeField]
     private GameObject levelHighScoreMenu;
+	[SerializeField] private GameObject HUD;
 
     private void Start()
     {
@@ -44,6 +45,7 @@ public class LevelEnd : MonoBehaviour
             }
 
             levelCompleteMenu.SetActive(true);
+			HUD.SetActive(false);
         }
     }
 
