@@ -28,9 +28,7 @@ public class CameraController : MonoBehaviour
         offset = transform.position.x - follow.transform.position.x;
         endPoint = end.transform.position.x;
         UpdateText();
-
-
-
+			   
     }
 
     // Follows assigned object until endpoint is reached

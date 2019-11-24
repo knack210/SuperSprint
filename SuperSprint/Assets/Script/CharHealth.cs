@@ -8,7 +8,7 @@ public class CharHealth : MonoBehaviour
 {
     private AudioSource source;
     //trashmax comment: changed health to 100f so its not null at start
-    private float health = 100f;
+    private float health;
     [SerializeField]
     private float maxHealth = 100f;
 
@@ -22,10 +22,7 @@ public class CharHealth : MonoBehaviour
 
     [SerializeField]
     private GameObject PoorMansParticle;
-
 	
-
-
     private float power;
     [SerializeField]
     private float maxPower = 100f;
@@ -59,6 +56,7 @@ public class CharHealth : MonoBehaviour
 		GetGrounded = this.gameObject.GetComponent<CharacterController>();
 		source = GetComponent<AudioSource>();
 
+		health = maxHealth;
         //SetHealthBar(); for ui
 
         //TrashMaxCode
@@ -66,9 +64,7 @@ public class CharHealth : MonoBehaviour
         SetHealthBar();
         SetPowerBar();
         //Trashmaxcode
-
-
-       
+			          
         power = 0;
         regenActive = true;
 

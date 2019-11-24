@@ -1,9 +1,7 @@
 fileFormatVersion: 2
-guid: 7f3d1166e61ce4746a89316f8929ec45
+guid: 3b5fd58f180baef49920789dc9cccf3b
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: BOY Mk2 jump sprite sheet_0
-    21300002: BOY Mk2 jump sprite sheet_1
+  fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -42,7 +40,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -71,75 +69,13 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: BOY Mk2 jump sprite sheet_0
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 90
-        width: 587
-        height: 416
-      alignment: 9
-      pivot: {x: 0.5, y: 0.48}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d1d87be343b90e4da22c26bba151383
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BOY Mk2 jump sprite sheet_1
-      rect:
-        serializedVersion: 2
-        x: 684
-        y: 99
-        width: 608
-        height: 453
-      alignment: 9
-      pivot: {x: 0.5, y: 0.44}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b607bdc3a9f019541a92829c9faf75c4
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: f517b1e9daea7a546b55570188b27275
+    spriteID: 20b17e07a72993a4eb78783426e03b7d
     vertices: []
     indices: 
     edges: []
