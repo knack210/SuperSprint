@@ -22,6 +22,7 @@ public class ScoreFunctionality : MonoBehaviour
     [SerializeField]
     private Text scoreTextInsideLevelHighScoresMenu;
 	     
+	[SerializeField] private Transform scoreTransform;
     private int currentScore;
 
 
@@ -38,8 +39,8 @@ public class ScoreFunctionality : MonoBehaviour
     public void AddScore(int points)
     {
         if (points > 0)
-        {
-            TextMeshProUGUI popup = Instantiate(scorePopup, scorePopup.transform);
+        {			
+            TextMeshProUGUI popup = Instantiate(scorePopup, scoreTransform);
             popup.text = "+" + points.ToString();
             popup.GetComponent<Animator>().SetTrigger("Move");            
 

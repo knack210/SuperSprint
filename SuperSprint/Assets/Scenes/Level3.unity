@@ -133,18 +133,6 @@ MonoBehaviour:
   shockWave: {fileID: 4950299705414760766, guid: 7b7e461591ab71a4992253527b19a2c6,
     type: 3}
   shockWaveSpawn: {fileID: 923618517}
---- !u!114 &209183245 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1381597154751312334, guid: 006b3291b9fa49549864ff78f3a7f39a,
-    type: 3}
-  m_PrefabInstance: {fileID: 489351579}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &284602561 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8110374950785261589, guid: 006b3291b9fa49549864ff78f3a7f39a,
@@ -434,6 +422,12 @@ MonoBehaviour:
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &489351581 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4996023498880429531, guid: 006b3291b9fa49549864ff78f3a7f39a,
+    type: 3}
+  m_PrefabInstance: {fileID: 489351579}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &509245408
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,6 +667,12 @@ PrefabInstance:
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d72a7f37d2847e54e8f3958e5623de30, type: 3}
+--- !u!224 &731301773 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5292331162239574563, guid: d72a7f37d2847e54e8f3958e5623de30,
+    type: 3}
+  m_PrefabInstance: {fileID: 731301772}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &914615025
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,7 +1298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   follow: {fileID: 157536639}
   end: {fileID: 1373583969}
-  distanceText: {fileID: 1923897974}
+  distanceStop: {fileID: 731301773}
   distanceSlider: {fileID: 1635052307}
 --- !u!114 &1503947362
 MonoBehaviour:
@@ -1313,9 +1313,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 489351580}
-  scorePopup: {fileID: 209183245}
+  scorePopup: {fileID: 5827110235529201523, guid: 3fc61756ad1dda24e8dfaf46ffc95ad2,
+    type: 3}
   scoreTextInsideLevelCompleteMenu: {fileID: 2127755029}
   scoreTextInsideLevelHighScoresMenu: {fileID: 284602561}
+  scoreTransform: {fileID: 489351581}
 --- !u!1 &1567298431 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5633552674290364647, guid: 006b3291b9fa49549864ff78f3a7f39a,
@@ -1408,18 +1410,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a51dcb8ba1a24c64f8b0cd201d339020, type: 3}
---- !u!114 &1923897974 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1381597154700480170, guid: 006b3291b9fa49549864ff78f3a7f39a,
-    type: 3}
-  m_PrefabInstance: {fileID: 489351579}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1933723731
 PrefabInstance:
   m_ObjectHideFlags: 0

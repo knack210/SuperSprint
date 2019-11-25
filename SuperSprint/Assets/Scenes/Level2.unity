@@ -193,6 +193,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5633552674290364647, guid: 006b3291b9fa49549864ff78f3a7f39a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381597154304125465, guid: 006b3291b9fa49549864ff78f3a7f39a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1381597154751312334, guid: 006b3291b9fa49549864ff78f3a7f39a,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -343,16 +353,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5633552674290364647, guid: 006b3291b9fa49549864ff78f3a7f39a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381597155559593360, guid: 006b3291b9fa49549864ff78f3a7f39a,
-        type: 3}
-      propertyPath: m_BlockingMask.m_Bits
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 1381597153678323808, guid: 006b3291b9fa49549864ff78f3a7f39a,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -398,25 +398,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1381597154304125465, guid: 006b3291b9fa49549864ff78f3a7f39a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1381597154700480168, guid: 006b3291b9fa49549864ff78f3a7f39a,
         type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4384731604708334482, guid: 006b3291b9fa49549864ff78f3a7f39a,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4384731604708334482, guid: 006b3291b9fa49549864ff78f3a7f39a,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 116.98
       objectReference: {fileID: 0}
     - target: {fileID: 4624485263070295638, guid: 006b3291b9fa49549864ff78f3a7f39a,
         type: 3}
@@ -643,21 +628,6 @@ PrefabInstance:
       propertyPath: m_textInfo.wordCount
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1381597153980551430, guid: 006b3291b9fa49549864ff78f3a7f39a,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: QuitButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381597154486273827, guid: 006b3291b9fa49549864ff78f3a7f39a,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Resume
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381597154488746505, guid: 006b3291b9fa49549864ff78f3a7f39a,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadMainMenu
-      objectReference: {fileID: 0}
     - target: {fileID: 2294263213217549536, guid: 006b3291b9fa49549864ff78f3a7f39a,
         type: 3}
       propertyPath: m_isInputParsingRequired
@@ -672,6 +642,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381597155559593360, guid: 006b3291b9fa49549864ff78f3a7f39a,
+        type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384731604708334482, guid: 006b3291b9fa49549864ff78f3a7f39a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384731604708334482, guid: 006b3291b9fa49549864ff78f3a7f39a,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 116.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381597153980551430, guid: 006b3291b9fa49549864ff78f3a7f39a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381597154486273827, guid: 006b3291b9fa49549864ff78f3a7f39a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381597154488746505, guid: 006b3291b9fa49549864ff78f3a7f39a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadMainMenu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006b3291b9fa49549864ff78f3a7f39a, type: 3}
@@ -723,18 +723,12 @@ MonoBehaviour:
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &43555745 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1381597154700480170, guid: 006b3291b9fa49549864ff78f3a7f39a,
+--- !u!224 &29534054 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4996023498880429531, guid: 006b3291b9fa49549864ff78f3a7f39a,
     type: 3}
   m_PrefabInstance: {fileID: 29534049}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &116401142
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1055,6 +1049,11 @@ PrefabInstance:
       propertyPath: HUD
       value: 
       objectReference: {fileID: 1643486893}
+    - target: {fileID: 4151488345743864869, guid: d72a7f37d2847e54e8f3958e5623de30,
+        type: 3}
+      propertyPath: m_Name
+      value: LevelEndCameraStop
+      objectReference: {fileID: 0}
     - target: {fileID: 6004623883356108977, guid: d72a7f37d2847e54e8f3958e5623de30,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1216,13 +1215,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 3.2
       objectReference: {fileID: 0}
-    - target: {fileID: 4151488345743864869, guid: d72a7f37d2847e54e8f3958e5623de30,
-        type: 3}
-      propertyPath: m_Name
-      value: LevelEndCameraStop
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d72a7f37d2847e54e8f3958e5623de30, type: 3}
+--- !u!224 &658132155 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5292331162239574563, guid: d72a7f37d2847e54e8f3958e5623de30,
+    type: 3}
+  m_PrefabInstance: {fileID: 658132154}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &672956601
 GameObject:
   m_ObjectHideFlags: 0
@@ -1466,18 +1466,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e139fb64680bd364c94bce91ceb6cc91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &980763831 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1381597154751312334, guid: 006b3291b9fa49549864ff78f3a7f39a,
-    type: 3}
-  m_PrefabInstance: {fileID: 29534049}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &998695503
@@ -1815,9 +1803,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1636996887}
-  scorePopup: {fileID: 980763831}
+  scorePopup: {fileID: 5827110235529201523, guid: 3fc61756ad1dda24e8dfaf46ffc95ad2,
+    type: 3}
   scoreTextInsideLevelCompleteMenu: {fileID: 29534053}
   scoreTextInsideLevelHighScoresMenu: {fileID: 29534052}
+  scoreTransform: {fileID: 29534054}
 --- !u!114 &1222468208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1832,7 +1822,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   follow: {fileID: 892188149}
   end: {fileID: 190538582}
-  distanceText: {fileID: 43555745}
+  distanceStop: {fileID: 658132155}
   distanceSlider: {fileID: 1861633360}
 --- !u!114 &1222468209
 MonoBehaviour:
