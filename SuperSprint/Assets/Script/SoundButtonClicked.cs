@@ -28,7 +28,7 @@ public class SoundButtonClicked : MonoBehaviour
         }
     }
 
-    private void SetText(bool state)
+    public void SetText(bool state)
     {
         if (state)
         {

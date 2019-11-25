@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class PlayerPrefsManagement : MonoBehaviour
 {
-    /*
+	/*
      * The default player prefs does not store boolean,
      * to get around this we will use ints in the place of bools,
      * where an int = 0 is "false" and an int = 1 is "true"
      */
+
+	[SerializeField] private GameObject musicButton;
+	[SerializeField] private GameObject soundButton;
 
     // Checks if PlayerPref settings exist
     public void CheckForData()
@@ -49,9 +52,11 @@ public class PlayerPrefsManagement : MonoBehaviour
 
     }
 
-    public void DeleteAllData()
-    {
-        PlayerPrefs.DeleteAll();
-        SetDefaultData();
-    }
+	public void DeleteAllData()
+	{
+		PlayerPrefs.DeleteAll();
+		SetDefaultData();
+		if (musicButton != null ) musicButton.SendMessage("SetText", true);
+		if (soundButton != null) soundButton.SendMessage("SetText", true);
+	}
 }

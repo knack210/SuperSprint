@@ -51,29 +51,30 @@ public class CharacterController : MonoBehaviour
         // slideCol.enabled = false;
     }
 
-    private void Update()
-    {    
-        if (isRunning)
-        {
-            this.transform.position = Vector2.MoveTowards(transform.position, goalLocation, speed * Time.deltaTime);           
-        }
+	private void Update()
+	{
+		if (isRunning)
+		{
+			this.transform.position = Vector2.MoveTowards(transform.position, goalLocation, speed * Time.deltaTime);
+		
 
-        if (IsOnGround() && anim.GetBool("isJump"))
-        {
-            anim.SetBool("isJump", false);
-			//jumpCol.enabled = false;
-			//standCol.enabled = true;
-        }
-        
-        if (Input.GetButtonDown("Jump") && IsOnGround()) // Set to gesture up
-        {
-            CallJump();
-        }
+			if (IsOnGround() && anim.GetBool("isJump"))
+			{
+				anim.SetBool("isJump", false);
+				//jumpCol.enabled = false;
+				//standCol.enabled = true;
+			}
 
-        if (Input.GetButtonDown("Slide") && IsOnGround() && !isSliding) // Set to gesture down
-        {
-            SlideStart();
-        }
+			if (Input.GetButtonDown("Jump") && IsOnGround()) // Set to gesture up
+			{
+				CallJump();
+			}
+
+			if (Input.GetButtonDown("Slide") && IsOnGround() && !isSliding) // Set to gesture down
+			{
+				SlideStart();
+			}
+		}
     }
 
    public bool IsOnGround()

@@ -473,6 +473,7 @@ GameObject:
   - component: {fileID: 947063406}
   - component: {fileID: 947063405}
   - component: {fileID: 947063408}
+  - component: {fileID: 947063409}
   m_Layer: 0
   m_Name: 'music  Button '
   m_TagString: Untagged
@@ -603,6 +604,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicText: {fileID: 770894451}
+--- !u!114 &947063409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947063403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9da4ee9f0accaf5409a847a0833b102f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1164587800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,6 +1051,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ca0bd853df57d74ba9f6e9855c7ff55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicButton: {fileID: 947063403}
+  soundButton: {fileID: 1164587800}
 --- !u!114 &1409807928
 MonoBehaviour:
   m_ObjectHideFlags: 0
