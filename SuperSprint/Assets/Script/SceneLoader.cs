@@ -34,7 +34,7 @@ public class SceneLoader : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("isLevel3") == 1)
         {
-            Debug.Log("Add a level 3!");
+			SceneManager.LoadScene("Level3");
         }
         GameObject.FindGameObjectWithTag("Music").GetComponent<Music>().StopMusic();
     }
