@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSliding: 0
-  speed: 5
+  speed: 5.2
   jumpHeight: 13
   slideTime: 1
   goal: {fileID: 2974725918205494922}

@@ -6201,7 +6201,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1107109359}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 87.74999, y: -2.998, z: 0}
+  m_LocalPosition: {x: 87.74999, y: -2.965, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6865,7 +6865,7 @@ PrefabInstance:
     - target: {fileID: 2185982970597936581, guid: a51dcb8ba1a24c64f8b0cd201d339020,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.44
+      value: -1.56
       objectReference: {fileID: 0}
     - target: {fileID: 2185982970597936581, guid: a51dcb8ba1a24c64f8b0cd201d339020,
         type: 3}
@@ -7298,20 +7298,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 5633552674290364647, guid: 006b3291b9fa49549864ff78f3a7f39a,
+    - target: {fileID: 6036603824243952648, guid: 006b3291b9fa49549864ff78f3a7f39a,
         type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381597154304125465, guid: 006b3291b9fa49549864ff78f3a7f39a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4996023498880429531, guid: 006b3291b9fa49549864ff78f3a7f39a,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1381597154751312334, guid: 006b3291b9fa49549864ff78f3a7f39a,
         type: 3}
@@ -7322,11 +7312,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6036603824243952648, guid: 006b3291b9fa49549864ff78f3a7f39a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1381597155559593363, guid: 006b3291b9fa49549864ff78f3a7f39a,
         type: 3}
@@ -7478,11 +7463,16 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1381597155559593362, guid: 006b3291b9fa49549864ff78f3a7f39a,
+    - target: {fileID: 4996023498880429531, guid: 006b3291b9fa49549864ff78f3a7f39a,
         type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 205167281}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633552674290364647, guid: 006b3291b9fa49549864ff78f3a7f39a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1381597153678323808, guid: 006b3291b9fa49549864ff78f3a7f39a,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -7758,11 +7748,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1381597154304125465, guid: 006b3291b9fa49549864ff78f3a7f39a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1381597154700480168, guid: 006b3291b9fa49549864ff78f3a7f39a,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1381597155559593362, guid: 006b3291b9fa49549864ff78f3a7f39a,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 205167281}
     - target: {fileID: 6534368061928583773, guid: 006b3291b9fa49549864ff78f3a7f39a,
         type: 3}
       propertyPath: pauseMenuUI
@@ -8241,6 +8241,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6004623883356108972, guid: d72a7f37d2847e54e8f3958e5623de30,
+        type: 3}
+      propertyPath: m_Name
+      value: LevelEnd
+      objectReference: {fileID: 0}
     - target: {fileID: 6004623883356108975, guid: d72a7f37d2847e54e8f3958e5623de30,
         type: 3}
       propertyPath: victoryMessage
@@ -8261,16 +8266,6 @@ PrefabInstance:
       propertyPath: HUD
       value: 
       objectReference: {fileID: 7220889}
-    - target: {fileID: 6004623883356108972, guid: d72a7f37d2847e54e8f3958e5623de30,
-        type: 3}
-      propertyPath: m_Name
-      value: LevelEnd
-      objectReference: {fileID: 0}
-    - target: {fileID: 5292331162239574563, guid: d72a7f37d2847e54e8f3958e5623de30,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -1.49
-      objectReference: {fileID: 0}
     - target: {fileID: 6004623883356108977, guid: d72a7f37d2847e54e8f3958e5623de30,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8382,6 +8377,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 5bfa4c01ac27cb04aa6adfb24ea1e287,
         type: 3}
+    - target: {fileID: 5292331162239574563, guid: d72a7f37d2847e54e8f3958e5623de30,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.49
+      objectReference: {fileID: 0}
     - target: {fileID: 6004623883356108974, guid: d72a7f37d2847e54e8f3958e5623de30,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -8504,17 +8504,17 @@ PrefabInstance:
     - target: {fileID: 8773125123803025586, guid: ac71f571f9500ad49b7214c0375129d0,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.56
+      value: 2.6499999
       objectReference: {fileID: 0}
     - target: {fileID: 8773125123803025586, guid: ac71f571f9500ad49b7214c0375129d0,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 3.92
+      value: 3.52
       objectReference: {fileID: 0}
     - target: {fileID: 8773125123803025586, guid: ac71f571f9500ad49b7214c0375129d0,
         type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.y
-      value: 0.45
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8773125123803025586, guid: ac71f571f9500ad49b7214c0375129d0,
         type: 3}
@@ -8545,6 +8545,11 @@ PrefabInstance:
         type: 3}
       propertyPath: detectSwipeOnlyAfterRelease
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 516584890551223531, guid: ac71f571f9500ad49b7214c0375129d0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.793
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac71f571f9500ad49b7214c0375129d0, type: 3}

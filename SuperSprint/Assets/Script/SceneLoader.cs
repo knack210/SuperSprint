@@ -42,7 +42,8 @@ public class SceneLoader : MonoBehaviour
     public void LoadMainMenu()
     {
         SceneManager.LoadScene("Menu");
-        GameObject.FindGameObjectWithTag("Music").GetComponent<Music>().PlayMusic();
+		Music mPlayer = GameObject.FindGameObjectWithTag("Music").GetComponent<Music>();
+		mPlayer.PlayMusic();
     }
 
     public void LoadMissionMenu()

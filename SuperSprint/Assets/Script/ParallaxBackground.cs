@@ -7,12 +7,22 @@ public class ParallaxBackground : MonoBehaviour
 	private float length, startPoint;
 	private Camera _camera;
 	[SerializeField] private float parallaxSpeed;
+	[SerializeField] private GameObject overRidePosition;
    
     private void Start()
     {
 		_camera = Camera.main;
-		startPoint = transform.position.x;
-		length = GetComponent<SpriteRenderer>().bounds.size.x;
+		if (overRidePosition == null)
+		{
+			startPoint = this.transform.position.x;
+			length = this.GetComponent<SpriteRenderer>().bounds.size.x;
+		}
+
+		else
+		{
+			startPoint = overRidePosition.transform.position.x;
+			length = overRidePosition.GetComponent<SpriteRenderer>().bounds.size.x;
+		}
     }
 
 	private void Update()

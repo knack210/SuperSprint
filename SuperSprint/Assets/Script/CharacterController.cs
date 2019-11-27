@@ -56,8 +56,8 @@ public class CharacterController : MonoBehaviour
 		if (isRunning)
 		{
 			this.transform.position = Vector2.MoveTowards(transform.position, goalLocation, speed * Time.deltaTime);
-		
 
+			Debug.Log(GroundTouch.position);
 			if (IsOnGround() && anim.GetBool("isJump"))
 			{
 				anim.SetBool("isJump", false);
