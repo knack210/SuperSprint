@@ -21,7 +21,7 @@ public class LazerController : MonoBehaviour
         if (target != null)
         {
            this.transform.position = Vector2.MoveTowards(this.transform.position, FindTarget(), lazerSpeed * Time.deltaTime);
-            Debug.Log(this.transform.position);
+            //Debug.Log(this.transform.position);
         }
     }
 

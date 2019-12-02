@@ -22,6 +22,8 @@ public class CharHealth : MonoBehaviour
 
     [SerializeField]
     private GameObject PoorMansParticle;
+	[SerializeField]
+	private Button PowerButton;
 	
     private float power;
     [SerializeField]
@@ -53,6 +55,8 @@ public class CharHealth : MonoBehaviour
 
     private void Start()
     {
+		PowerButton.SendMessage("Disable");
+
 		GetGrounded = this.gameObject.GetComponent<CharacterController>();
 		source = GetComponent<AudioSource>();
 
@@ -91,15 +95,19 @@ public class CharHealth : MonoBehaviour
 
         if (power >= powerCost)
         {
-            // Flashing UI element indicating Power is available
-            // Debug.Log("Ready");
-            EnableParticleWhenPowerIsFull();
+			// Flashing UI element indicating Power is available
+			// Debug.Log("Ready");
+			//EnableParticleWhenPowerIsFull();
+			if (PowerButton.IsActive())
+			PowerButton.SendMessage("Enable");
         }
                
         //trashmax
         else if (power < powerCost)
         {
-            DisableParticle();
+			//DisableParticle();
+			if (PowerButton.IsActive())
+				PowerButton.SendMessage("Disable");
         }
 
 
@@ -131,7 +139,7 @@ public class CharHealth : MonoBehaviour
     {
         if (health <= 0)
         {
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("GameOver");
         }
     }
 

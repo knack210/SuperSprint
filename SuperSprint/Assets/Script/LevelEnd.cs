@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelEnd : MonoBehaviour
 {
+	private Camera _camera;
     private Scene scene;
     public Text victoryMessage;
     // Start is called before the first frame update
@@ -17,14 +18,16 @@ public class LevelEnd : MonoBehaviour
 
     private void Start()
     {
+		_camera = Camera.main;
         scene = SceneManager.GetActiveScene();
         victoryMessage.text = "";
-        levelCompleteMenu.SetActive(false);
+        levelCompleteMenu?.SetActive(false);
+		levelHighScoreMenu?.SetActive(false);
     }
 
     private void OnBecameVisible()
     {
-        Camera.main.SendMessage("DisableText");
+        _camera.SendMessage("DisableText");
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -44,22 +47,24 @@ public class LevelEnd : MonoBehaviour
                 PlayerPrefs.SetInt("isLevel3", 1);
             }
 
-            levelCompleteMenu.SetActive(true);
-			HUD.SetActive(false);
+			_camera.SendMessage("UpdateLevelScores");
+            levelCompleteMenu?.SetActive(true);
+			HUD?.SetActive(false);
         }
     }
 
 
     public void EnableLevelCompletedMenu()
     {
-        levelHighScoreMenu.SetActive(false);
-        levelCompleteMenu.SetActive(true);
+        levelHighScoreMenu?.SetActive(false);
+        levelCompleteMenu?.SetActive(true);
     }
 
 
     public void EnableHighScoresScreen()
     {
-        levelCompleteMenu.SetActive(false);
-        levelHighScoreMenu.SetActive(true);
+		
+		levelCompleteMenu?.SetActive(false);		
+        levelHighScoreMenu?.SetActive(true);
     }
 }

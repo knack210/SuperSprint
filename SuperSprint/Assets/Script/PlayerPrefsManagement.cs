@@ -35,20 +35,20 @@ public class PlayerPrefsManagement : MonoBehaviour
         PlayerPrefs.SetInt("isMusic", 1); // Bool for determing if Background music is enabled
         PlayerPrefs.SetInt("isSound", 1); // Bool for determing if Sound Effects are enabled
 
-        PlayerPrefs.SetInt("firstL1", 0); // Int determing default first place score for Level 1
-        PlayerPrefs.SetInt("secondL1", 0); // Int determing default second place score for Level 1
-        PlayerPrefs.SetInt("thirdL1", 0); // Int determing default third place score for Level 1
+        PlayerPrefs.SetInt("firstL1", 150); // Int determing default first place score for Level 1
+        PlayerPrefs.SetInt("secondL1", 100); // Int determing default second place score for Level 1
+        PlayerPrefs.SetInt("thirdL1", 50); // Int determing default third place score for Level 1
 
 
-        PlayerPrefs.SetInt("firstL2", 0); // Int determing first place score for Level 2
-        PlayerPrefs.SetInt("secondL2", 0); // Int determing second place score for Level 2
-        PlayerPrefs.SetInt("thirdL2", 0); // Int determing third place score for Level 2
+        PlayerPrefs.SetInt("firstL2", 150); // Int determing first place score for Level 2
+        PlayerPrefs.SetInt("secondL2", 100); // Int determing second place score for Level 2
+        PlayerPrefs.SetInt("thirdL2", 50); // Int determing third place score for Level 2
         
-        PlayerPrefs.SetInt("firstL3", 0); // Int determing first place score for Level 3
-        PlayerPrefs.SetInt("secondL3", 0); // Int determing second place score for Level 3
-        PlayerPrefs.SetInt("thirdL3", 0); // Int determing third place score for Level 3
+        PlayerPrefs.SetInt("firstL3", 275); // Int determing first place score for Level 3
+        PlayerPrefs.SetInt("secondL3", 200); // Int determing second place score for Level 3
+        PlayerPrefs.SetInt("thirdL3", 175); // Int determing third place score for Level 3
 
-        PlayerPrefs.SetString("name", "BILL"); // String containing player entered name
+       // PlayerPrefs.SetString("name", "BILL"); // String containing player entered name
 
     }
 

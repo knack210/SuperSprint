@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Obstacle
   - Music
+  - HighScoreMenu
+  - CompleteMenu
   layers:
   - Default
   - TransparentFX
