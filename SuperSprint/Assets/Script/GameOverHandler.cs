@@ -7,7 +7,7 @@ public class GameOverHandler : MonoBehaviour
 {
     public void RetryLevel()
 	{
-		if (PlayerPrefs.HasKey("CurrentKey"))
+		if (PlayerPrefs.HasKey("CurrentLevel"))
 		{
 			SceneManager.LoadScene(PlayerPrefs.GetString("CurrentLevel"));
 		}

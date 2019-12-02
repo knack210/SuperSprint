@@ -248,7 +248,7 @@ MonoBehaviour:
   powerScore: 0
   regenRate: 10
   invincibleTime: 1
-  powerSfx: {fileID: 8300000, guid: bc2778edbbfca304db1626da822cc8eb, type: 3}
+  powerSfx: {fileID: 8300000, guid: eedda3e6620054d468ec84b1053ecb04, type: 3}
 --- !u!114 &4153230585924567881
 MonoBehaviour:
   m_ObjectHideFlags: 0
