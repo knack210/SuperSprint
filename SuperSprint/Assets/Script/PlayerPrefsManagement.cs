@@ -58,5 +58,6 @@ public class PlayerPrefsManagement : MonoBehaviour
 		SetDefaultData();
 		if (musicButton != null ) musicButton.SendMessage("SetText", true);
 		if (soundButton != null) soundButton.SendMessage("SetText", true);
+		this.SendMessage("ClosePanel");
 	}
 }

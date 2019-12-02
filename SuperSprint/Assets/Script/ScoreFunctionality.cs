@@ -42,6 +42,7 @@ public class ScoreFunctionality : MonoBehaviour
 
 	public void UpdateLevelScores()
 	{
+		this.SendMessage("PlayVictoryMusic");
 		UpdateScoreCountInLevelCompleteMenu();
 		UpdateScoreCountInLevelHighScoresMenu();
 	}

@@ -15,7 +15,6 @@ public class AreYouSureToggle : MonoBehaviour
     }
 
     public void ClosePanel()
-
     {
         if (Panel !=null)
         {

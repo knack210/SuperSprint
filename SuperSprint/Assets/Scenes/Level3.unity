@@ -4029,6 +4029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68e311811376d5946aa55dc4ddc024be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  VictoryMusic: {fileID: 8300000, guid: d1ef0a917d4a92c419458334ea2782e7, type: 3}
 --- !u!1001 &1521834772
 PrefabInstance:
   m_ObjectHideFlags: 0

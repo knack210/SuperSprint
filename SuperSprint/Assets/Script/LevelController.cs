@@ -7,6 +7,7 @@ public class LevelController : MonoBehaviour
 {
     private AudioSource source;
 	private Scene currentScene;
+	[SerializeField] private AudioClip VictoryMusic;
 
     private void Start()
     {
@@ -17,4 +18,13 @@ public class LevelController : MonoBehaviour
 
 		PlayerPrefs.SetString("CurrentLevel", currentScene.name);
     }
+
+	public void PlayVictoryMusic()
+	{
+		if (VictoryMusic != null)
+		{
+			source?.Stop();
+			source?.PlayOneShot(VictoryMusic);
+		}
+	}
 }
